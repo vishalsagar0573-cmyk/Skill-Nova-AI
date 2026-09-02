@@ -1,7 +1,7 @@
 # SkillNova AI: Implementation & Architecture Plan
 
 ## Architecture Overview
-SkillNova AI is a full-stack ML-powered platform that analyzes a student's technical resume and profile, extracting key competencies via NLP, matching them to optimal career trajectories using Scikit-Learn, and identifying missing skills for course recommendations.
+SkillNova AI is a full-stack AI-powered career guidance platform that analyzes a student's resume and profile details along with their preferred job role. It evaluates the match between the student's skills and potential career roles, recommends the top 3 suitable job roles with match percentages, identifies missing skills, and provides a personalized career and skill-development path.
 
 ### Tech Stack
 * **Frontend**: React 18, Vite, Tailwind CSS, Recharts, Framer Motion
