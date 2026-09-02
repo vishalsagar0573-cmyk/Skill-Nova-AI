@@ -198,8 +198,3 @@ cd backend
    npm run dev
    ```
    *The frontend will run at `http://localhost:5173`.*
-
-## Next Implementation Steps for You
-1. **Resume Parser Implementation**: Integrate `spaCy` to extract entities directly from the uploaded file (PDF/DOC) in the `/api/resume/upload` route.
-2. **Authentication Flow**: Implement the `passlib` & `python-jose` logic to secure routes.
-3. **Connect Frontend to Backend**: Replace the mock data in the React frontend with `axios` calls to your running FastAPI backend.
