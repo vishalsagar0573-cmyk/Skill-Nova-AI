@@ -1,0 +1,45 @@
+{
+    "features": [
+        "cgpa",
+        "frontend_score",
+        "backend_score",
+        "database_score",
+        "ai_ml_score",
+        "data_science_score",
+        "cloud_score",
+        "programming_score",
+        "soft_skill_score",
+        "overall_competency_score",
+        "dsa_level_encoded"
+    ],
+    "label_mapping": {
+        "0": "AI Engineer",
+        "1": "Backend Developer",
+        "2": "Cloud Engineer",
+        "3": "Cyber Security Engineer",
+        "4": "Data Analyst",
+        "5": "Data Scientist",
+        "6": "DevOps Engineer",
+        "7": "Frontend Developer",
+        "8": "Full Stack Developer",
+        "9": "Java Developer",
+        "10": "Machine Learning Engineer",
+        "11": "Mobile App Developer",
+        "12": "Python Developer",
+        "13": "Software Engineer"
+    },
+    "dataset_version": "1.0",
+    "model_version": "1.1",
+    "best_model_type": "Tuned XGBoost",
+    "accuracy": 0.9676,
+    "preprocessing": {
+        "categorical_encoding": "OrdinalEncoder",
+        "numerical_scaling": "StandardScaler"
+    },
+    "best_params": {
+        "subsample": 1.0,
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.01
+    }
+}

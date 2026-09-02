@@ -1,0 +1,20 @@
+                           precision    recall  f1-score   support
+
+              AI Engineer       1.00      1.00      1.00       150
+        Backend Developer       1.00      1.00      1.00       145
+           Cloud Engineer       1.00      0.99      0.99       142
+  Cyber Security Engineer       0.98      1.00      0.99       130
+             Data Analyst       1.00      1.00      1.00       150
+           Data Scientist       1.00      1.00      1.00       139
+          DevOps Engineer       0.99      0.99      0.99       161
+       Frontend Developer       0.78      0.82      0.80       130
+     Full Stack Developer       1.00      1.00      1.00       140
+           Java Developer       0.99      0.97      0.98       134
+Machine Learning Engineer       1.00      1.00      1.00       147
+     Mobile App Developer       0.83      0.78      0.81       143
+         Python Developer       0.97      0.99      0.98       125
+        Software Engineer       1.00      1.00      1.00       164
+
+                 accuracy                           0.97      2000
+                macro avg       0.97      0.97      0.97      2000
+             weighted avg       0.97      0.97      0.97      2000

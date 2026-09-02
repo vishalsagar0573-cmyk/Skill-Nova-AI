@@ -5,8 +5,9 @@ from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
 from sqlalchemy.orm import Session
 from database import get_db
 from models.resume import Resume
-from models.user import UserProfile
 from services.parser import parse_resume
+from dependencies.auth import get_current_user
+from models.user import User
 
 router = APIRouter()
 
@@ -16,7 +17,7 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 ALLOWED_EXTENSIONS = {".pdf", ".doc", ".docx"}
 
 @router.post("/upload")
-async def upload_resume(file: UploadFile = File(...), db: Session = Depends(get_db)):
+async def upload_resume(file: UploadFile = File(...), db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     # Validate extension
     ext = os.path.splitext(file.filename)[1].lower()
     if ext not in ALLOWED_EXTENSIONS:
@@ -32,7 +33,7 @@ async def upload_resume(file: UploadFile = File(...), db: Session = Depends(get_
         
     # Store metadata in PostgreSQL
     db_resume = Resume(
-        user_id=1, # Mocking user 1 for now
+        user_id=current_user.id,
         filename=file.filename,
         file_path=file_path,
         file_type=ext
@@ -45,23 +46,14 @@ async def upload_resume(file: UploadFile = File(...), db: Session = Depends(get_
     
     # NLP Parsing integration
     if ext == ".pdf":
-        parsed_data = parse_resume(file_path)
-        
-        # Save parsed data to user profile in PostgreSQL
-        user_id = 1
-        profile = db.query(UserProfile).filter(UserProfile.user_id == user_id).first()
-        
-        if not profile:
-            profile = UserProfile(user_id=user_id)
-            db.add(profile)
-            
-        profile.skills = parsed_data.get("skills", profile.skills)
-        profile.internships = parsed_data.get("experience", profile.internships)
-        profile.certifications = parsed_data.get("certifications", profile.certifications)
-        profile.projects = parsed_data.get("projects", profile.projects)
-        
-        db.commit()
-        db.refresh(profile)
+        try:
+            parsed_data = parse_resume(file_path)
+            # Save parsed data directly to the Resume record
+            db_resume.parsed_data = parsed_data
+            db.commit()
+            db.refresh(db_resume)
+        except Exception as e:
+            print(f"Error parsing resume: {e}")
         
         return {
             "message": "Resume uploaded and parsed successfully.",

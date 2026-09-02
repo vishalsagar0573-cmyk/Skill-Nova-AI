@@ -1,0 +1,5 @@
+Model,Mean Accuracy,Std Dev,Precision,Recall,F1 Score
+Random Forest,96.64,0.4,96.66,96.64,96.64
+XGBoost,96.66,0.29,96.68,96.66,96.66
+SVM,95.88,0.47,95.91,95.88,95.88
+ANN,95.46,0.21,95.5,95.46,95.45
