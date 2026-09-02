@@ -68,10 +68,11 @@ def parse_resume(file_path: str) -> dict:
         elif any(re.search(r'\b' + re.escape(kw) + r'\b', sent_lower) for kw in proj_keywords) and len(sent_text) < 150:
             projects.append(sent_text)
 
+    # Convert to structured lists
     return {
-        "skills": ", ".join(normalized_skills),
-        "education": " | ".join(list(set(education))[:2]), 
-        "experience": " | ".join(list(set(experience))[:3]),
-        "certifications": " | ".join(list(set(certifications))[:3]),
-        "projects": " | ".join(list(set(projects))[:3])
+        "technical_skills": normalized_skills,
+        "education": list(set(education))[:3], 
+        "experience": list(set(experience))[:3],
+        "certifications": list(set(certifications))[:3],
+        "projects": list(set(projects))[:3]
     }
