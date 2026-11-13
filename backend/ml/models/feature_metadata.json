@@ -28,18 +28,18 @@
         "12": "Python Developer",
         "13": "Software Engineer"
     },
-    "dataset_version": "1.0",
-    "model_version": "1.1",
+    "dataset_version": "2.0",
+    "model_version": "2.0",
     "best_model_type": "Tuned XGBoost",
-    "accuracy": 0.9676,
+    "accuracy": 0.9176,
     "preprocessing": {
         "categorical_encoding": "OrdinalEncoder",
         "numerical_scaling": "StandardScaler"
     },
     "best_params": {
-        "subsample": 1.0,
-        "n_estimators": 300,
-        "max_depth": 7,
-        "learning_rate": 0.01
+        "xgb__subsample": 0.8,
+        "xgb__n_estimators": 200,
+        "xgb__max_depth": 5,
+        "xgb__learning_rate": 0.2
     }
 }

@@ -1,0 +1,12 @@
+# Phase 5 Backup & Student Data Protection
+*.dump
+backend/backups/
+scratch/*_backup*
+scratch/*_snapshot*
+uploads/
+*.log
+__pycache__/
+*.pyc
+node_modules/
+dist/
+.env

@@ -2,22 +2,266 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light;
+  --color-app-bg: #F8FAFC;
+  --color-card-bg: #FFFFFF;
+  --color-sidebar-bg: #FFFFFF;
+  --color-border: #E2E8F0;
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-secondary: #7965FF;
+  --color-text-main: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-input-bg: #F1F5F9;
+  --color-input-border: #CBD5E1;
+  --color-card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  color-scheme: dark;
+  --color-app-bg: #080B18;
+  --color-card-bg: #141A30;
+  --color-sidebar-bg: #0B1021;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-primary: #7965FF;
+  --color-primary-hover: #6854EA;
+  --color-secondary: #42CFA5;
+  --color-text-main: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-input-bg: rgba(13, 18, 36, 0.6);
+  --color-input-border: rgba(255, 255, 255, 0.1);
+  --color-card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #030712;
+  background-color: var(--color-app-bg);
+  color: var(--color-text-main);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Glassmorphism Classes supporting Dual Themes */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
 }
 
+.dark .glass {
+  background: rgba(13, 18, 36, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--color-card-shadow);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .glass-card {
+  background: rgba(20, 26, 48, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.08);
+}
+
+.dark .glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-card-ai {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px -2px rgba(37, 99, 235, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .glass-card-ai {
+  background: linear-gradient(135deg, rgba(121, 101, 255, 0.09) 0%, rgba(20, 26, 48, 0.85) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(121, 101, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(121, 101, 255, 0.12);
+}
+
+.glass-card-career {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px -2px rgba(6, 182, 212, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .glass-card-career {
+  background: linear-gradient(135deg, rgba(66, 207, 165, 0.09) 0%, rgba(20, 26, 48, 0.85) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(66, 207, 165, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(66, 207, 165, 0.12);
+}
+
+.glass-pill {
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--color-border);
+}
+
+.dark .glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Form input styling */
+.glass-input {
+  width: 100%;
+  background: var(--color-input-bg);
+  border: 1px solid var(--color-input-border);
+  border-radius: 0.875rem;
+  padding: 0.75rem 1rem;
+  color: var(--color-text-main);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.glass-input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}
+
+/* Gradient Text Utilities */
 .gradient-text {
-  background: linear-gradient(to right, #4F46E5, #10B981);
+  background: linear-gradient(135deg, #2563EB 0%, #7965FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.dark .gradient-text {
+  background: linear-gradient(135deg, #9B8AFF 0%, #42CFA5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-ai {
+  background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .gradient-text-ai {
+  background: linear-gradient(135deg, #9B8AFF 0%, #7965FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-career {
+  background: linear-gradient(135deg, #06B6D4 0%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark .gradient-text-career {
+  background: linear-gradient(135deg, #42CFA5 0%, #2DD4BF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar for Dual Themes */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+/* =========================================================================
+   Light Theme Readability Guarantees & Safety Overrides
+   Ensures text, headings, badges, and muted labels remain crisp & high-contrast
+   in Light Theme even if legacy dark-theme color classes are present
+   ========================================================================= */
+html.light .text-\[\#F5F6FF\],
+html.light .text-\[\#F8FAFC\] {
+  color: #0F172A !important;
+}
+
+html.light .text-\[\#929BB2\],
+html.light .text-\[\#CBD5E1\] {
+  color: #475569 !important;
+}
+
+html.light .border-white\/10,
+html.light .border-white\/5,
+html.light .border-white\/\[0\.08\],
+html.light .border-white\/\[0\.05\],
+html.light .border-white\/\[0\.03\] {
+  border-color: #E2E8F0 !important;
+}
+
+html.light .bg-white\/5,
+html.light .bg-white\/\[0\.03\],
+html.light .bg-white\/\[0\.04\] {
+  background-color: #F8FAFC !important;
+}
+
+html.light .bg-white\/10 {
+  background-color: #F1F5F9 !important;
+}
+
+html.light .divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #E2E8F0 !important;
+}
+
+html.light .recharts-cartesian-grid line {
+  stroke: #E2E8F0 !important;
+}
+
+html.light .recharts-polar-grid line,
+html.light .recharts-polar-grid circle,
+html.light .recharts-polar-grid polygon {
+  stroke: #CBD5E1 !important;
+}
+
+html.light .recharts-polar-angle-axis text {
+  fill: #334155 !important;
+  font-weight: 600;
+}
+

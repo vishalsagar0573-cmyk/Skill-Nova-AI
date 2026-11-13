@@ -13,78 +13,93 @@ ROLES = [
 NUM_SAMPLES = 10000
 
 def generate_row(role):
-    # Base scores initialization (default to random average scores 30-60)
+    # Base scores initialization (default baseline background noise 15-55)
     scores = {
-        'cgpa': round(random.uniform(5.5, 8.5), 2),
+        'cgpa': round(random.uniform(6.0, 9.0), 2),
         'dsa_level': random.choice(['Beginner', 'Intermediate']),
-        'frontend_score': random.randint(20, 60),
+        'frontend_score': random.randint(15, 55),
         'backend_score': random.randint(20, 60),
         'database_score': random.randint(20, 60),
-        'ai_ml_score': random.randint(10, 50),
-        'data_science_score': random.randint(10, 50),
-        'cloud_score': random.randint(20, 50),
-        'programming_score': random.randint(40, 70),
-        'soft_skill_score': random.randint(40, 90),
+        'ai_ml_score': random.randint(10, 45),
+        'data_science_score': random.randint(10, 45),
+        'cloud_score': random.randint(15, 50),
+        'programming_score': random.randint(35, 70),
+        'soft_skill_score': random.randint(35, 85),
         'target_role': role
     }
 
-    # Role specific logic
+    # Role specific realistic profiles
     if role == "Frontend Developer":
-        scores['frontend_score'] = random.randint(75, 100)
+        scores['frontend_score'] = random.randint(75, 98)
         scores['programming_score'] = random.randint(60, 90)
+        scores['ai_ml_score'] = random.randint(10, 35)
     elif role == "Backend Developer":
-        scores['backend_score'] = random.randint(75, 100)
+        scores['backend_score'] = random.randint(75, 98)
         scores['database_score'] = random.randint(70, 95)
         scores['programming_score'] = random.randint(70, 95)
         scores['dsa_level'] = random.choice(['Intermediate', 'Advanced'])
     elif role == "Full Stack Developer":
-        scores['frontend_score'] = random.randint(70, 95)
-        scores['backend_score'] = random.randint(70, 95)
-        scores['database_score'] = random.randint(60, 90)
+        scores['frontend_score'] = random.randint(65, 92)
+        scores['backend_score'] = random.randint(65, 92)
+        scores['database_score'] = random.randint(60, 88)
+        scores['programming_score'] = random.randint(70, 95)
     elif role == "Software Engineer":
-        scores['programming_score'] = random.randint(80, 100)
-        scores['dsa_level'] = random.choice(['Intermediate', 'Advanced'])
+        scores['programming_score'] = random.randint(78, 100)
+        scores['dsa_level'] = random.choice(['Intermediate', 'Advanced', 'Advanced'])
         scores['cgpa'] = round(random.uniform(7.5, 9.8), 2)
+        scores['backend_score'] = random.randint(55, 85)
     elif role == "Java Developer":
-        scores['programming_score'] = random.randint(75, 100)
-        scores['backend_score'] = random.randint(65, 90)
+        scores['programming_score'] = random.randint(75, 98)
+        scores['backend_score'] = random.randint(70, 95)
+        scores['database_score'] = random.randint(65, 90)
     elif role == "Python Developer":
-        scores['programming_score'] = random.randint(75, 100)
-        scores['backend_score'] = random.randint(60, 90)
-        scores['ai_ml_score'] = random.randint(50, 80)
+        scores['programming_score'] = random.randint(70, 95)
+        scores['backend_score'] = random.randint(65, 92)
+        scores['database_score'] = random.randint(50, 80)
+        scores['ai_ml_score'] = random.randint(15, 45)
+        scores['data_science_score'] = random.randint(15, 45)
     elif role == "Mobile App Developer":
-        scores['frontend_score'] = random.randint(60, 90)
+        scores['frontend_score'] = random.randint(65, 92)
         scores['programming_score'] = random.randint(70, 95)
+        scores['backend_score'] = random.randint(40, 75)
     elif role == "AI Engineer":
-        scores['ai_ml_score'] = random.randint(75, 100)
+        scores['ai_ml_score'] = random.randint(75, 98)
         scores['programming_score'] = random.randint(70, 95)
-        scores['cloud_score'] = random.randint(50, 80)
+        scores['cloud_score'] = random.randint(50, 85)
+        scores['backend_score'] = random.randint(50, 85)
+        scores['cgpa'] = round(random.uniform(7.0, 9.8), 2)
         scores['dsa_level'] = random.choice(['Intermediate', 'Advanced'])
     elif role == "Machine Learning Engineer":
-        scores['ai_ml_score'] = random.randint(85, 100)
-        scores['data_science_score'] = random.randint(75, 95)
-        scores['programming_score'] = random.randint(75, 95)
-        scores['cgpa'] = round(random.uniform(7.5, 10.0), 2)
+        scores['ai_ml_score'] = random.randint(75, 98)
+        scores['data_science_score'] = random.randint(70, 95)
+        scores['programming_score'] = random.randint(70, 95)
+        scores['backend_score'] = random.randint(45, 85)
+        scores['cgpa'] = round(random.uniform(7.0, 9.8), 2)
+        scores['dsa_level'] = random.choice(['Intermediate', 'Advanced', 'Intermediate'])
     elif role == "Data Scientist":
-        scores['data_science_score'] = random.randint(80, 100)
-        scores['ai_ml_score'] = random.randint(65, 90)
+        scores['data_science_score'] = random.randint(75, 98)
+        scores['ai_ml_score'] = random.randint(60, 90)
         scores['database_score'] = random.randint(60, 90)
+        scores['programming_score'] = random.randint(60, 85)
+        scores['cgpa'] = round(random.uniform(6.8, 9.6), 2)
     elif role == "Data Analyst":
-        scores['data_science_score'] = random.randint(65, 90)
-        scores['database_score'] = random.randint(75, 100)
-        scores['soft_skill_score'] = random.randint(70, 95)
+        scores['data_science_score'] = random.randint(65, 92)
+        scores['database_score'] = random.randint(70, 95)
+        scores['soft_skill_score'] = random.randint(65, 95)
+        scores['ai_ml_score'] = random.randint(15, 45)
     elif role == "DevOps Engineer":
-        scores['cloud_score'] = random.randint(80, 100)
-        scores['backend_score'] = random.randint(60, 90)
+        scores['cloud_score'] = random.randint(75, 98)
+        scores['backend_score'] = random.randint(60, 88)
         scores['database_score'] = random.randint(50, 80)
     elif role == "Cloud Engineer":
-        scores['cloud_score'] = random.randint(85, 100)
-        scores['programming_score'] = random.randint(60, 90)
+        scores['cloud_score'] = random.randint(80, 98)
+        scores['programming_score'] = random.randint(55, 85)
+        scores['backend_score'] = random.randint(50, 80)
     elif role == "Cyber Security Engineer":
-        scores['cloud_score'] = random.randint(60, 90)
-        scores['backend_score'] = random.randint(60, 90)
-        scores['database_score'] = random.randint(60, 90)
-        scores['programming_score'] = random.randint(70, 100)
+        scores['cloud_score'] = random.randint(65, 92)
+        scores['programming_score'] = random.randint(65, 90)
+        scores['backend_score'] = random.randint(60, 88)
+        scores['database_score'] = random.randint(55, 85)
         
     # Calculate overall competency score average safely
     sum_scores = (
@@ -112,12 +127,18 @@ if __name__ == "__main__":
     for _ in range(remaining):
         data.append(generate_row(random.choice(ROLES)))
         
-    df = pd.DataFrame(data)
-    
     # Shuffle the dataset
-    df = df.sample(frac=1).reset_index(drop=True)
+    random.shuffle(data)
     
     output_dir = os.path.dirname(os.path.abspath(__file__))
     output_path = os.path.join(output_dir, "synthetic_dataset.csv")
-    df.to_csv(output_path, index=False)
-    print(f"Dataset successfully saved to {output_path} with {len(df)} records.")
+    
+    import csv
+    if data:
+        fieldnames = list(data[0].keys())
+        with open(output_path, mode="w", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(data)
+            
+    print(f"Dataset successfully saved to {output_path} with {len(data)} records.")

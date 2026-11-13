@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SkillNova Auth Helper</title>
+</head>
+<body style="background: #0B0F19; color: #fff; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh;">
+  <div style="text-align: center;">
+    <h2>Authenticating Session & Initializing Theme...</h2>
+    <p id="status">Redirecting...</p>
+  </div>
+  <script>
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const token = params.get('token');
+      const theme = params.get('theme') || 'light';
+      const target = params.get('target') || '/';
+
+      if (token) {
+        localStorage.setItem('token', token);
+      }
+      localStorage.setItem('skillnova_theme', theme);
+      
+      const root = document.documentElement;
+      if (theme === 'dark') {
+        root.classList.add('dark');
+        root.classList.remove('light');
+      } else {
+        root.classList.add('light');
+        root.classList.remove('dark');
+      }
+
+      document.getElementById('status').innerText = 'Navigating to ' + target;
+      window.location.replace(target);
+    } catch (e) {
+      document.getElementById('status').innerText = 'Error: ' + e.message;
+    }
+  </script>
+</body>
+</html>

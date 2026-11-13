@@ -15,18 +15,22 @@ class DashboardService:
         skill_gap = db.query(SkillGapAnalysis).filter(SkillGapAnalysis.user_id == user_id).first()
         user_model = db.query(UserProfile).filter(UserProfile.id == user_id).first()
         
-        # Calculate Profile Completion
-        fields = ["skills", "projects", "internships", "certifications", "cgpa", "career_interests"]
-        filled = 0
-        if competency and competency.competency_json:
-            filled = sum(1 for f in fields if competency.competency_json.get(f))
-        profile_completion_pct = (filled / len(fields)) * 100 if fields else 0.0
+        # Use the single authoritative source of truth for Profile Completion
+        if profile:
+            from routers.student_profile import calculate_completion
+            profile_completion_pct = calculate_completion(profile, db=db)
+            if profile.profile_completion != profile_completion_pct:
+                profile.profile_completion = profile_completion_pct
+                db.commit()
+                db.refresh(profile)
+        else:
+            profile_completion_pct = 0
         
         # Construct unified payload
         return {
             "profile": {
                 "name": profile.full_name if profile else (user_model.username if user_model else "Student"),
-                "preferred_role": competency.competency_json.get("preferred_job_role", "Not set") if competency and competency.competency_json else "Not set",
+                "preferred_role": (profile.preferred_job_role if profile and profile.preferred_job_role else (competency.competency_json.get("preferred_job_role") if competency and competency.competency_json else "Not set")),
                 "profile_completion": profile_completion_pct
             },
             "competency_scores": {
@@ -35,6 +39,8 @@ class DashboardService:
                 "backend": competency.backend_score if competency else 0,
                 "database": competency.database_score if competency else 0,
                 "ai_ml": competency.ai_ml_score if competency else 0,
+                "data_science": competency.data_science_score if competency else 0,
+                "cloud": competency.cloud_score if competency else 0,
                 "programming": competency.programming_score if competency else 0,
                 "soft_skills": competency.soft_skill_score if competency else 0,
             } if competency else None,
@@ -42,7 +48,8 @@ class DashboardService:
                 "best_match": job_compat.best_role if job_compat else "None",
                 "compatibility_score": job_compat.compatibility_score if job_compat else 0,
                 "missing_skills": job_compat.missing_skills if job_compat else [],
-                "top_roles": [job_compat.best_role] if job_compat else [] # Placeholder for top roles if we store them all later
+                "top_roles": [job_compat.best_role] if job_compat else [], # Placeholder for top roles if we store them all later
+                "matches": job_compat.matches if job_compat else []
             } if job_compat else None,
             "skill_gap": {
                 "overall_gap_percentage": skill_gap.overall_gap_percentage if skill_gap else 0,

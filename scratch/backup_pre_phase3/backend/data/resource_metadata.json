@@ -1,0 +1,2135 @@
+{
+  "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/": {
+    "id": 1,
+    "canonical_url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+    "skill_name": "Data Structures",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Data Structures."
+  },
+  "1": {
+    "id": 1,
+    "canonical_url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/",
+    "skill_name": "Data Structures",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Data Structures."
+  },
+  "https://visualgo.net/en": {
+    "id": 2,
+    "canonical_url": "https://visualgo.net/en",
+    "skill_name": "Data Structures",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Data Structures."
+  },
+  "2": {
+    "id": 2,
+    "canonical_url": "https://visualgo.net/en",
+    "skill_name": "Data Structures",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Data Structures."
+  },
+  "https://www.coursera.org/learn/algorithms-part1": {
+    "id": 3,
+    "canonical_url": "https://www.coursera.org/learn/algorithms-part1",
+    "skill_name": "Data Structures",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Data Structures."
+  },
+  "3": {
+    "id": 3,
+    "canonical_url": "https://www.coursera.org/learn/algorithms-part1",
+    "skill_name": "Data Structures",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Data Structures."
+  },
+  "https://www.coursera.org/learn/algorithms-part2": {
+    "id": 4,
+    "canonical_url": "https://www.coursera.org/learn/algorithms-part2",
+    "skill_name": "Algorithms",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Algorithms."
+  },
+  "4": {
+    "id": 4,
+    "canonical_url": "https://www.coursera.org/learn/algorithms-part2",
+    "skill_name": "Algorithms",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Algorithms."
+  },
+  "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/": {
+    "id": 5,
+    "canonical_url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
+    "skill_name": "Algorithms",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Algorithms."
+  },
+  "5": {
+    "id": 5,
+    "canonical_url": "https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/",
+    "skill_name": "Algorithms",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Algorithms."
+  },
+  "https://cs50.harvard.edu/x/": {
+    "id": 6,
+    "canonical_url": "https://cs50.harvard.edu/x/",
+    "skill_name": "Algorithms",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Algorithms."
+  },
+  "6": {
+    "id": 6,
+    "canonical_url": "https://cs50.harvard.edu/x/",
+    "skill_name": "Algorithms",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Algorithms."
+  },
+  "https://github.com/donnemartin/system-design-primer": {
+    "id": 7,
+    "canonical_url": "https://github.com/donnemartin/system-design-primer",
+    "skill_name": "System Design",
+    "cost_tier": "Open Source",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with System Design."
+  },
+  "7": {
+    "id": 7,
+    "canonical_url": "https://github.com/donnemartin/system-design-primer",
+    "skill_name": "System Design",
+    "cost_tier": "Open Source",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with System Design."
+  },
+  "https://cloud.google.com/architecture": {
+    "id": 8,
+    "canonical_url": "https://cloud.google.com/architecture",
+    "skill_name": "System Design",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with System Design."
+  },
+  "8": {
+    "id": 8,
+    "canonical_url": "https://cloud.google.com/architecture",
+    "skill_name": "System Design",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with System Design."
+  },
+  "https://www.coursera.org/learn/computer-networking": {
+    "id": 9,
+    "canonical_url": "https://www.coursera.org/learn/computer-networking",
+    "skill_name": "Networking",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Networking."
+  },
+  "9": {
+    "id": 9,
+    "canonical_url": "https://www.coursera.org/learn/computer-networking",
+    "skill_name": "Networking",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Networking."
+  },
+  "https://www.freecodecamp.org/news/free-computer-networking-course/": {
+    "id": 10,
+    "canonical_url": "https://www.freecodecamp.org/news/free-computer-networking-course/",
+    "skill_name": "Networking",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Networking."
+  },
+  "10": {
+    "id": 10,
+    "canonical_url": "https://www.freecodecamp.org/news/free-computer-networking-course/",
+    "skill_name": "Networking",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Networking."
+  },
+  "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux": {
+    "id": 11,
+    "canonical_url": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux",
+    "skill_name": "Linux",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Linux."
+  },
+  "11": {
+    "id": 11,
+    "canonical_url": "https://www.edx.org/learn/linux/the-linux-foundation-introduction-to-linux",
+    "skill_name": "Linux",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Linux."
+  },
+  "https://linuxcommand.org/tlcl.php": {
+    "id": 12,
+    "canonical_url": "https://linuxcommand.org/tlcl.php",
+    "skill_name": "Linux",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Linux."
+  },
+  "12": {
+    "id": 12,
+    "canonical_url": "https://linuxcommand.org/tlcl.php",
+    "skill_name": "Linux",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Linux."
+  },
+  "https://www.gnu.org/software/bash/manual/bash.html": {
+    "id": 13,
+    "canonical_url": "https://www.gnu.org/software/bash/manual/bash.html",
+    "skill_name": "Bash",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Bash."
+  },
+  "13": {
+    "id": 13,
+    "canonical_url": "https://www.gnu.org/software/bash/manual/bash.html",
+    "skill_name": "Bash",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Bash."
+  },
+  "https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/": {
+    "id": 14,
+    "canonical_url": "https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/",
+    "skill_name": "Bash",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Bash."
+  },
+  "14": {
+    "id": 14,
+    "canonical_url": "https://www.freecodecamp.org/news/bash-scripting-tutorial-linux-shell-script-and-command-line-for-beginners/",
+    "skill_name": "Bash",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Bash."
+  },
+  "https://cs50.harvard.edu/python/": {
+    "id": 15,
+    "canonical_url": "https://cs50.harvard.edu/python/",
+    "skill_name": "Python",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Python."
+  },
+  "15": {
+    "id": 15,
+    "canonical_url": "https://cs50.harvard.edu/python/",
+    "skill_name": "Python",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Python."
+  },
+  "https://docs.python.org/3/tutorial/": {
+    "id": 16,
+    "canonical_url": "https://docs.python.org/3/tutorial/",
+    "skill_name": "Python",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Python."
+  },
+  "16": {
+    "id": 16,
+    "canonical_url": "https://docs.python.org/3/tutorial/",
+    "skill_name": "Python",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Python."
+  },
+  "https://www.coursera.org/specializations/python": {
+    "id": 17,
+    "canonical_url": "https://www.coursera.org/specializations/python",
+    "skill_name": "Python",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Python."
+  },
+  "17": {
+    "id": 17,
+    "canonical_url": "https://www.coursera.org/specializations/python",
+    "skill_name": "Python",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Python."
+  },
+  "https://docs.oracle.com/javase/tutorial/": {
+    "id": 18,
+    "canonical_url": "https://docs.oracle.com/javase/tutorial/",
+    "skill_name": "Java",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Java."
+  },
+  "18": {
+    "id": 18,
+    "canonical_url": "https://docs.oracle.com/javase/tutorial/",
+    "skill_name": "Java",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Java."
+  },
+  "https://www.coursera.org/learn/java-programming": {
+    "id": 19,
+    "canonical_url": "https://www.coursera.org/learn/java-programming",
+    "skill_name": "Java",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Java."
+  },
+  "19": {
+    "id": 19,
+    "canonical_url": "https://www.coursera.org/learn/java-programming",
+    "skill_name": "Java",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Java."
+  },
+  "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps": {
+    "id": 20,
+    "canonical_url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps",
+    "skill_name": "JavaScript",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with JavaScript."
+  },
+  "20": {
+    "id": 20,
+    "canonical_url": "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps",
+    "skill_name": "JavaScript",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with JavaScript."
+  },
+  "https://javascript.info/": {
+    "id": 21,
+    "canonical_url": "https://javascript.info/",
+    "skill_name": "JavaScript",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with JavaScript."
+  },
+  "21": {
+    "id": 21,
+    "canonical_url": "https://javascript.info/",
+    "skill_name": "JavaScript",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with JavaScript."
+  },
+  "https://www.typescriptlang.org/docs/handbook/2/basic-types.html": {
+    "id": 22,
+    "canonical_url": "https://www.typescriptlang.org/docs/handbook/2/basic-types.html",
+    "skill_name": "TypeScript",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with TypeScript."
+  },
+  "22": {
+    "id": 22,
+    "canonical_url": "https://www.typescriptlang.org/docs/handbook/2/basic-types.html",
+    "skill_name": "TypeScript",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with TypeScript."
+  },
+  "https://www.freecodecamp.org/news/learn-typescript-beginners-guide/": {
+    "id": 23,
+    "canonical_url": "https://www.freecodecamp.org/news/learn-typescript-beginners-guide/",
+    "skill_name": "TypeScript",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with TypeScript."
+  },
+  "23": {
+    "id": 23,
+    "canonical_url": "https://www.freecodecamp.org/news/learn-typescript-beginners-guide/",
+    "skill_name": "TypeScript",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with TypeScript."
+  },
+  "https://kotlinlang.org/docs/kotlin-tour-welcome.html": {
+    "id": 24,
+    "canonical_url": "https://kotlinlang.org/docs/kotlin-tour-welcome.html",
+    "skill_name": "Kotlin",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Kotlin."
+  },
+  "24": {
+    "id": 24,
+    "canonical_url": "https://kotlinlang.org/docs/kotlin-tour-welcome.html",
+    "skill_name": "Kotlin",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Kotlin."
+  },
+  "https://developer.android.com/courses/android-basics-compose/course": {
+    "id": 25,
+    "canonical_url": "https://developer.android.com/courses/android-basics-compose/course",
+    "skill_name": "Kotlin",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Kotlin."
+  },
+  "25": {
+    "id": 25,
+    "canonical_url": "https://developer.android.com/courses/android-basics-compose/course",
+    "skill_name": "Kotlin",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Kotlin."
+  },
+  "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour/": {
+    "id": 26,
+    "canonical_url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour/",
+    "skill_name": "Swift",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Swift."
+  },
+  "26": {
+    "id": 26,
+    "canonical_url": "https://docs.swift.org/swift-book/documentation/the-swift-programming-language/guidedtour/",
+    "skill_name": "Swift",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Swift."
+  },
+  "https://developer.apple.com/tutorials/develop-in-swift": {
+    "id": 27,
+    "canonical_url": "https://developer.apple.com/tutorials/develop-in-swift",
+    "skill_name": "Swift",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Swift."
+  },
+  "27": {
+    "id": 27,
+    "canonical_url": "https://developer.apple.com/tutorials/develop-in-swift",
+    "skill_name": "Swift",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Swift."
+  },
+  "https://www.coursera.org/learn/r-programming": {
+    "id": 28,
+    "canonical_url": "https://www.coursera.org/learn/r-programming",
+    "skill_name": "R",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with R."
+  },
+  "28": {
+    "id": 28,
+    "canonical_url": "https://www.coursera.org/learn/r-programming",
+    "skill_name": "R",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with R."
+  },
+  "29": {
+    "id": 29,
+    "canonical_url": "https://cloud.r-project.org/doc/manuals/r-release/R-intro.html",
+    "skill_name": "R",
+    "cost_tier": "Open Source",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with R."
+  },
+  "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics": {
+    "id": 30,
+    "canonical_url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics",
+    "skill_name": "HTML",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with HTML."
+  },
+  "30": {
+    "id": 30,
+    "canonical_url": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics",
+    "skill_name": "HTML",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with HTML."
+  },
+  "https://www.freecodecamp.org/learn/2022/responsive-web-design/": {
+    "id": 31,
+    "canonical_url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+    "skill_name": "HTML",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with HTML."
+  },
+  "31": {
+    "id": 31,
+    "canonical_url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/",
+    "skill_name": "HTML",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with HTML."
+  },
+  "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps": {
+    "id": 32,
+    "canonical_url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps",
+    "skill_name": "CSS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with CSS."
+  },
+  "32": {
+    "id": 32,
+    "canonical_url": "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps",
+    "skill_name": "CSS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with CSS."
+  },
+  "https://web.dev/learn/css": {
+    "id": 33,
+    "canonical_url": "https://web.dev/learn/css",
+    "skill_name": "CSS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with CSS."
+  },
+  "33": {
+    "id": 33,
+    "canonical_url": "https://web.dev/learn/css",
+    "skill_name": "CSS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with CSS."
+  },
+  "https://react.dev/learn": {
+    "id": 34,
+    "canonical_url": "https://react.dev/learn",
+    "skill_name": "React",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React."
+  },
+  "34": {
+    "id": 34,
+    "canonical_url": "https://react.dev/learn",
+    "skill_name": "React",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React."
+  },
+  "https://www.coursera.org/professional-certificates/meta-front-end-developer": {
+    "id": 35,
+    "canonical_url": "https://www.coursera.org/professional-certificates/meta-front-end-developer",
+    "skill_name": "React",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React."
+  },
+  "35": {
+    "id": 35,
+    "canonical_url": "https://www.coursera.org/professional-certificates/meta-front-end-developer",
+    "skill_name": "React",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React."
+  },
+  "36": {
+    "id": 36,
+    "canonical_url": "https://www.freecodecamp.org/learn/front-end-development-libraries/",
+    "skill_name": "React",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React."
+  },
+  "https://redux.js.org/tutorials/essentials/part-1-overview-concepts": {
+    "id": 37,
+    "canonical_url": "https://redux.js.org/tutorials/essentials/part-1-overview-concepts",
+    "skill_name": "Redux",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Redux."
+  },
+  "37": {
+    "id": 37,
+    "canonical_url": "https://redux.js.org/tutorials/essentials/part-1-overview-concepts",
+    "skill_name": "Redux",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Redux."
+  },
+  "38": {
+    "id": 38,
+    "canonical_url": "https://redux-toolkit.js.org/tutorials/quick-start",
+    "skill_name": "Redux",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Redux."
+  },
+  "https://reactnative.dev/docs/getting-started": {
+    "id": 39,
+    "canonical_url": "https://reactnative.dev/docs/getting-started",
+    "skill_name": "React Native",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React Native."
+  },
+  "39": {
+    "id": 39,
+    "canonical_url": "https://reactnative.dev/docs/getting-started",
+    "skill_name": "React Native",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React Native."
+  },
+  "https://cs50.harvard.edu/mobile/": {
+    "id": 40,
+    "canonical_url": "https://cs50.harvard.edu/mobile/",
+    "skill_name": "React Native",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React Native."
+  },
+  "40": {
+    "id": 40,
+    "canonical_url": "https://cs50.harvard.edu/mobile/",
+    "skill_name": "React Native",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React Native."
+  },
+  "https://docs.flutter.dev/get-started/install": {
+    "id": 41,
+    "canonical_url": "https://docs.flutter.dev/get-started/install",
+    "skill_name": "Flutter",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Flutter."
+  },
+  "41": {
+    "id": 41,
+    "canonical_url": "https://docs.flutter.dev/get-started/install",
+    "skill_name": "Flutter",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Flutter."
+  },
+  "https://www.freecodecamp.org/news/learn-flutter-full-course/": {
+    "id": 42,
+    "canonical_url": "https://www.freecodecamp.org/news/learn-flutter-full-course/",
+    "skill_name": "Flutter",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Flutter."
+  },
+  "42": {
+    "id": 42,
+    "canonical_url": "https://www.freecodecamp.org/news/learn-flutter-full-course/",
+    "skill_name": "Flutter",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Flutter."
+  },
+  "https://developer.android.com/studio/intro": {
+    "id": 43,
+    "canonical_url": "https://developer.android.com/studio/intro",
+    "skill_name": "Android Studio",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Android Studio."
+  },
+  "43": {
+    "id": 43,
+    "canonical_url": "https://developer.android.com/studio/intro",
+    "skill_name": "Android Studio",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Android Studio."
+  },
+  "44": {
+    "id": 44,
+    "canonical_url": "https://www.coursera.org/learn/intro-to-mobile-development",
+    "skill_name": "Mobile Development",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Mobile Development."
+  },
+  "https://fastapi.tiangolo.com/tutorial/": {
+    "id": 45,
+    "canonical_url": "https://fastapi.tiangolo.com/tutorial/",
+    "skill_name": "FastAPI",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with FastAPI."
+  },
+  "45": {
+    "id": 45,
+    "canonical_url": "https://fastapi.tiangolo.com/tutorial/",
+    "skill_name": "FastAPI",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with FastAPI."
+  },
+  "https://www.freecodecamp.org/news/fastapi-quickstart/": {
+    "id": 46,
+    "canonical_url": "https://www.freecodecamp.org/news/fastapi-quickstart/",
+    "skill_name": "FastAPI",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with FastAPI."
+  },
+  "46": {
+    "id": 46,
+    "canonical_url": "https://www.freecodecamp.org/news/fastapi-quickstart/",
+    "skill_name": "FastAPI",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with FastAPI."
+  },
+  "https://docs.djangoproject.com/en/stable/intro/tutorial01/": {
+    "id": 47,
+    "canonical_url": "https://docs.djangoproject.com/en/stable/intro/tutorial01/",
+    "skill_name": "Django",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Django."
+  },
+  "47": {
+    "id": 47,
+    "canonical_url": "https://docs.djangoproject.com/en/stable/intro/tutorial01/",
+    "skill_name": "Django",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Django."
+  },
+  "https://cs50.harvard.edu/web/": {
+    "id": 48,
+    "canonical_url": "https://cs50.harvard.edu/web/",
+    "skill_name": "Django",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Django."
+  },
+  "48": {
+    "id": 48,
+    "canonical_url": "https://cs50.harvard.edu/web/",
+    "skill_name": "Django",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Django."
+  },
+  "49": {
+    "id": 49,
+    "canonical_url": "https://flask.palletsprojects.com/en/stable/quickstart/",
+    "skill_name": "Flask",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Flask."
+  },
+  "50": {
+    "id": 50,
+    "canonical_url": "https://flask.palletsprojects.com/en/stable/tutorial/",
+    "skill_name": "Flask",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Flask."
+  },
+  "https://spring.io/guides/gs/spring-boot/": {
+    "id": 51,
+    "canonical_url": "https://spring.io/guides/gs/spring-boot/",
+    "skill_name": "Spring Boot",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Spring Boot."
+  },
+  "51": {
+    "id": 51,
+    "canonical_url": "https://spring.io/guides/gs/spring-boot/",
+    "skill_name": "Spring Boot",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Spring Boot."
+  },
+  "52": {
+    "id": 52,
+    "canonical_url": "https://spring.io/guides/gs/rest-service/",
+    "skill_name": "Spring Boot",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Spring Boot."
+  },
+  "https://hibernate.org/orm/documentation/getting-started/": {
+    "id": 53,
+    "canonical_url": "https://hibernate.org/orm/documentation/getting-started/",
+    "skill_name": "Hibernate",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Hibernate."
+  },
+  "53": {
+    "id": 53,
+    "canonical_url": "https://hibernate.org/orm/documentation/getting-started/",
+    "skill_name": "Hibernate",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Hibernate."
+  },
+  "https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html": {
+    "id": 54,
+    "canonical_url": "https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html",
+    "skill_name": "Maven",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Maven."
+  },
+  "54": {
+    "id": 54,
+    "canonical_url": "https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html",
+    "skill_name": "Maven",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Maven."
+  },
+  "https://microservices.io/": {
+    "id": 55,
+    "canonical_url": "https://microservices.io/",
+    "skill_name": "Microservices",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Microservices."
+  },
+  "55": {
+    "id": 55,
+    "canonical_url": "https://microservices.io/",
+    "skill_name": "Microservices",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Microservices."
+  },
+  "https://www.coursera.org/learn/google-cloud-java-spring": {
+    "id": 56,
+    "canonical_url": "https://www.coursera.org/learn/google-cloud-java-spring",
+    "skill_name": "Microservices",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Microservices."
+  },
+  "56": {
+    "id": 56,
+    "canonical_url": "https://www.coursera.org/learn/google-cloud-java-spring",
+    "skill_name": "Microservices",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Microservices."
+  },
+  "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design": {
+    "id": 57,
+    "canonical_url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+    "skill_name": "REST API",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with REST API."
+  },
+  "57": {
+    "id": 57,
+    "canonical_url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+    "skill_name": "REST API",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with REST API."
+  },
+  "https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api/": {
+    "id": 58,
+    "canonical_url": "https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api/",
+    "skill_name": "REST API",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with REST API."
+  },
+  "58": {
+    "id": 58,
+    "canonical_url": "https://www.freecodecamp.org/news/rest-api-design-best-practices-build-a-rest-api/",
+    "skill_name": "REST API",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with REST API."
+  },
+  "https://redis.io/docs/latest/get-started/": {
+    "id": 59,
+    "canonical_url": "https://redis.io/docs/latest/get-started/",
+    "skill_name": "Redis",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Redis."
+  },
+  "59": {
+    "id": 59,
+    "canonical_url": "https://redis.io/docs/latest/get-started/",
+    "skill_name": "Redis",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Redis."
+  },
+  "https://university.redis.com/courses/ru101/": {
+    "id": 60,
+    "canonical_url": "https://university.redis.com/courses/ru101/",
+    "skill_name": "Redis",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Redis."
+  },
+  "60": {
+    "id": 60,
+    "canonical_url": "https://university.redis.com/courses/ru101/",
+    "skill_name": "Redis",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Redis."
+  },
+  "https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html": {
+    "id": 61,
+    "canonical_url": "https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html",
+    "skill_name": "Celery",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Celery."
+  },
+  "61": {
+    "id": 61,
+    "canonical_url": "https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html",
+    "skill_name": "Celery",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Celery."
+  },
+  "https://docs.pytest.org/en/stable/getting-started.html": {
+    "id": 62,
+    "canonical_url": "https://docs.pytest.org/en/stable/getting-started.html",
+    "skill_name": "PyTest",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PyTest."
+  },
+  "62": {
+    "id": 62,
+    "canonical_url": "https://docs.pytest.org/en/stable/getting-started.html",
+    "skill_name": "PyTest",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PyTest."
+  },
+  "63": {
+    "id": 63,
+    "canonical_url": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+    "skill_name": "PyTest",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PyTest."
+  },
+  "https://sqlbolt.com/": {
+    "id": 64,
+    "canonical_url": "https://sqlbolt.com/",
+    "skill_name": "SQL",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with SQL."
+  },
+  "64": {
+    "id": 64,
+    "canonical_url": "https://sqlbolt.com/",
+    "skill_name": "SQL",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with SQL."
+  },
+  "https://www.coursera.org/learn/sql-for-data-science": {
+    "id": 65,
+    "canonical_url": "https://www.coursera.org/learn/sql-for-data-science",
+    "skill_name": "SQL",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with SQL."
+  },
+  "65": {
+    "id": 65,
+    "canonical_url": "https://www.coursera.org/learn/sql-for-data-science",
+    "skill_name": "SQL",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with SQL."
+  },
+  "https://mode.com/sql-tutorial/": {
+    "id": 66,
+    "canonical_url": "https://mode.com/sql-tutorial/",
+    "skill_name": "SQL",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with SQL."
+  },
+  "66": {
+    "id": 66,
+    "canonical_url": "https://mode.com/sql-tutorial/",
+    "skill_name": "SQL",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with SQL."
+  },
+  "https://www.postgresql.org/docs/current/tutorial.html": {
+    "id": 67,
+    "canonical_url": "https://www.postgresql.org/docs/current/tutorial.html",
+    "skill_name": "PostgreSQL",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PostgreSQL."
+  },
+  "67": {
+    "id": 67,
+    "canonical_url": "https://www.postgresql.org/docs/current/tutorial.html",
+    "skill_name": "PostgreSQL",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PostgreSQL."
+  },
+  "https://www.coursera.org/specializations/postgresql-for-everybody": {
+    "id": 68,
+    "canonical_url": "https://www.coursera.org/specializations/postgresql-for-everybody",
+    "skill_name": "PostgreSQL",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PostgreSQL."
+  },
+  "68": {
+    "id": 68,
+    "canonical_url": "https://www.coursera.org/specializations/postgresql-for-everybody",
+    "skill_name": "PostgreSQL",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PostgreSQL."
+  },
+  "https://www.postgresqltutorial.com/": {
+    "id": 69,
+    "canonical_url": "https://www.postgresqltutorial.com/",
+    "skill_name": "PostgreSQL",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PostgreSQL."
+  },
+  "69": {
+    "id": 69,
+    "canonical_url": "https://www.postgresqltutorial.com/",
+    "skill_name": "PostgreSQL",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PostgreSQL."
+  },
+  "https://firebase.google.com/docs/guides": {
+    "id": 70,
+    "canonical_url": "https://firebase.google.com/docs/guides",
+    "skill_name": "Firebase",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Firebase."
+  },
+  "70": {
+    "id": 70,
+    "canonical_url": "https://firebase.google.com/docs/guides",
+    "skill_name": "Firebase",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Firebase."
+  },
+  "https://www.coursera.org/specializations/machine-learning-introduction": {
+    "id": 71,
+    "canonical_url": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "skill_name": "Machine Learning",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Machine Learning."
+  },
+  "71": {
+    "id": 71,
+    "canonical_url": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "skill_name": "Machine Learning",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Machine Learning."
+  },
+  "https://www.freecodecamp.org/learn/machine-learning-with-python/": {
+    "id": 72,
+    "canonical_url": "https://www.freecodecamp.org/learn/machine-learning-with-python/",
+    "skill_name": "Machine Learning",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Machine Learning."
+  },
+  "72": {
+    "id": 72,
+    "canonical_url": "https://www.freecodecamp.org/learn/machine-learning-with-python/",
+    "skill_name": "Machine Learning",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Machine Learning."
+  },
+  "73": {
+    "id": 73,
+    "canonical_url": "https://cs229.stanford.edu/",
+    "skill_name": "Machine Learning",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Machine Learning."
+  },
+  "https://www.coursera.org/specializations/deep-learning": {
+    "id": 74,
+    "canonical_url": "https://www.coursera.org/specializations/deep-learning",
+    "skill_name": "Deep Learning",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Deep Learning."
+  },
+  "74": {
+    "id": 74,
+    "canonical_url": "https://www.coursera.org/specializations/deep-learning",
+    "skill_name": "Deep Learning",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Deep Learning."
+  },
+  "https://course.fast.ai/": {
+    "id": 75,
+    "canonical_url": "https://course.fast.ai/",
+    "skill_name": "Deep Learning",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Deep Learning."
+  },
+  "75": {
+    "id": 75,
+    "canonical_url": "https://course.fast.ai/",
+    "skill_name": "Deep Learning",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Deep Learning."
+  },
+  "76": {
+    "id": 76,
+    "canonical_url": "https://scikit-learn.org/stable/user_guide.html",
+    "skill_name": "Scikit-learn",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Scikit-learn."
+  },
+  "77": {
+    "id": 77,
+    "canonical_url": "https://inria.github.io/scikit-learn-mooc/",
+    "skill_name": "Scikit-learn",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Scikit-learn."
+  },
+  "https://www.tensorflow.org/tutorials": {
+    "id": 78,
+    "canonical_url": "https://www.tensorflow.org/tutorials",
+    "skill_name": "TensorFlow",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with TensorFlow."
+  },
+  "78": {
+    "id": 78,
+    "canonical_url": "https://www.tensorflow.org/tutorials",
+    "skill_name": "TensorFlow",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with TensorFlow."
+  },
+  "https://www.coursera.org/professional-certificates/tensorflow-in-practice": {
+    "id": 79,
+    "canonical_url": "https://www.coursera.org/professional-certificates/tensorflow-in-practice",
+    "skill_name": "TensorFlow",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with TensorFlow."
+  },
+  "79": {
+    "id": 79,
+    "canonical_url": "https://www.coursera.org/professional-certificates/tensorflow-in-practice",
+    "skill_name": "TensorFlow",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with TensorFlow."
+  },
+  "80": {
+    "id": 80,
+    "canonical_url": "https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html",
+    "skill_name": "PyTorch",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PyTorch."
+  },
+  "81": {
+    "id": 81,
+    "canonical_url": "https://pytorch.org/tutorials/beginner/basics/intro.html",
+    "skill_name": "PyTorch",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PyTorch."
+  },
+  "https://keras.io/getting_started/": {
+    "id": 82,
+    "canonical_url": "https://keras.io/getting_started/",
+    "skill_name": "Keras",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Keras."
+  },
+  "82": {
+    "id": 82,
+    "canonical_url": "https://keras.io/getting_started/",
+    "skill_name": "Keras",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Keras."
+  },
+  "https://xgboost.readthedocs.io/en/stable/python/python_intro.html": {
+    "id": 83,
+    "canonical_url": "https://xgboost.readthedocs.io/en/stable/python/python_intro.html",
+    "skill_name": "XGBoost",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with XGBoost."
+  },
+  "83": {
+    "id": 83,
+    "canonical_url": "https://xgboost.readthedocs.io/en/stable/python/python_intro.html",
+    "skill_name": "XGBoost",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with XGBoost."
+  },
+  "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops": {
+    "id": 84,
+    "canonical_url": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops",
+    "skill_name": "MLOps",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with MLOps."
+  },
+  "84": {
+    "id": 84,
+    "canonical_url": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops",
+    "skill_name": "MLOps",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with MLOps."
+  },
+  "https://madewithml.com/": {
+    "id": 85,
+    "canonical_url": "https://madewithml.com/",
+    "skill_name": "MLOps",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with MLOps."
+  },
+  "85": {
+    "id": 85,
+    "canonical_url": "https://madewithml.com/",
+    "skill_name": "MLOps",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with MLOps."
+  },
+  "https://pandas.pydata.org/docs/user_guide/10min.html": {
+    "id": 86,
+    "canonical_url": "https://pandas.pydata.org/docs/user_guide/10min.html",
+    "skill_name": "Pandas",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Pandas."
+  },
+  "86": {
+    "id": 86,
+    "canonical_url": "https://pandas.pydata.org/docs/user_guide/10min.html",
+    "skill_name": "Pandas",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Pandas."
+  },
+  "https://www.freecodecamp.org/learn/data-analysis-with-python/": {
+    "id": 87,
+    "canonical_url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+    "skill_name": "Pandas",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Pandas."
+  },
+  "87": {
+    "id": 87,
+    "canonical_url": "https://www.freecodecamp.org/learn/data-analysis-with-python/",
+    "skill_name": "Pandas",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Pandas."
+  },
+  "https://numpy.org/doc/stable/user/quickstart.html": {
+    "id": 88,
+    "canonical_url": "https://numpy.org/doc/stable/user/quickstart.html",
+    "skill_name": "NumPy",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with NumPy."
+  },
+  "88": {
+    "id": 88,
+    "canonical_url": "https://numpy.org/doc/stable/user/quickstart.html",
+    "skill_name": "NumPy",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with NumPy."
+  },
+  "https://www.coursera.org/learn/stanford-statistics": {
+    "id": 89,
+    "canonical_url": "https://www.coursera.org/learn/stanford-statistics",
+    "skill_name": "Statistics",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Statistics."
+  },
+  "89": {
+    "id": 89,
+    "canonical_url": "https://www.coursera.org/learn/stanford-statistics",
+    "skill_name": "Statistics",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Statistics."
+  },
+  "https://www.khanacademy.org/math/statistics-probability": {
+    "id": 90,
+    "canonical_url": "https://www.khanacademy.org/math/statistics-probability",
+    "skill_name": "Statistics",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Statistics."
+  },
+  "90": {
+    "id": 90,
+    "canonical_url": "https://www.khanacademy.org/math/statistics-probability",
+    "skill_name": "Statistics",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Statistics."
+  },
+  "91": {
+    "id": 91,
+    "canonical_url": "https://www.coursera.org/learn/python-plotting",
+    "skill_name": "Data Visualization",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Data Visualization."
+  },
+  "https://learn.microsoft.com/en-us/training/paths/get-started-power-bi/": {
+    "id": 92,
+    "canonical_url": "https://learn.microsoft.com/en-us/training/paths/get-started-power-bi/",
+    "skill_name": "Power BI",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Power BI."
+  },
+  "92": {
+    "id": 92,
+    "canonical_url": "https://learn.microsoft.com/en-us/training/paths/get-started-power-bi/",
+    "skill_name": "Power BI",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Power BI."
+  },
+  "https://www.tableau.com/learn/training": {
+    "id": 93,
+    "canonical_url": "https://www.tableau.com/learn/training",
+    "skill_name": "Tableau",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Tableau."
+  },
+  "93": {
+    "id": 93,
+    "canonical_url": "https://www.tableau.com/learn/training",
+    "skill_name": "Tableau",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Tableau."
+  },
+  "https://support.microsoft.com/en-us/office/excel-video-training-9bc05390-e94c-46af-a5b3-d7c22f6990bb": {
+    "id": 94,
+    "canonical_url": "https://support.microsoft.com/en-us/office/excel-video-training-9bc05390-e94c-46af-a5b3-d7c22f6990bb",
+    "skill_name": "Excel",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Excel."
+  },
+  "94": {
+    "id": 94,
+    "canonical_url": "https://support.microsoft.com/en-us/office/excel-video-training-9bc05390-e94c-46af-a5b3-d7c22f6990bb",
+    "skill_name": "Excel",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Excel."
+  },
+  "https://explore.skillbuilder.aws/": {
+    "id": 95,
+    "canonical_url": "https://explore.skillbuilder.aws/",
+    "skill_name": "AWS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with AWS."
+  },
+  "95": {
+    "id": 95,
+    "canonical_url": "https://explore.skillbuilder.aws/",
+    "skill_name": "AWS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with AWS."
+  },
+  "https://docs.aws.amazon.com/": {
+    "id": 96,
+    "canonical_url": "https://docs.aws.amazon.com/",
+    "skill_name": "AWS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with AWS."
+  },
+  "96": {
+    "id": 96,
+    "canonical_url": "https://docs.aws.amazon.com/",
+    "skill_name": "AWS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with AWS."
+  },
+  "97": {
+    "id": 97,
+    "canonical_url": "https://aws.amazon.com/getting-started/",
+    "skill_name": "AWS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with AWS."
+  },
+  "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/": {
+    "id": 98,
+    "canonical_url": "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/",
+    "skill_name": "Azure",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Azure."
+  },
+  "98": {
+    "id": 98,
+    "canonical_url": "https://learn.microsoft.com/en-us/training/paths/az-900-describe-cloud-concepts/",
+    "skill_name": "Azure",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Azure."
+  },
+  "https://www.coursera.org/learn/gcp-fundamentals": {
+    "id": 99,
+    "canonical_url": "https://www.coursera.org/learn/gcp-fundamentals",
+    "skill_name": "GCP",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with GCP."
+  },
+  "99": {
+    "id": 99,
+    "canonical_url": "https://www.coursera.org/learn/gcp-fundamentals",
+    "skill_name": "GCP",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with GCP."
+  },
+  "https://www.coursera.org/learn/introduction-to-cloud": {
+    "id": 100,
+    "canonical_url": "https://www.coursera.org/learn/introduction-to-cloud",
+    "skill_name": "Cloud Computing",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Cloud Computing."
+  },
+  "100": {
+    "id": 100,
+    "canonical_url": "https://www.coursera.org/learn/introduction-to-cloud",
+    "skill_name": "Cloud Computing",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Cloud Computing."
+  },
+  "https://www.coursera.org/specializations/cloud-computing": {
+    "id": 101,
+    "canonical_url": "https://www.coursera.org/specializations/cloud-computing",
+    "skill_name": "Cloud",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Cloud."
+  },
+  "101": {
+    "id": 101,
+    "canonical_url": "https://www.coursera.org/specializations/cloud-computing",
+    "skill_name": "Cloud",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Cloud."
+  },
+  "https://docs.docker.com/get-started/": {
+    "id": 102,
+    "canonical_url": "https://docs.docker.com/get-started/",
+    "skill_name": "Docker",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Docker."
+  },
+  "102": {
+    "id": 102,
+    "canonical_url": "https://docs.docker.com/get-started/",
+    "skill_name": "Docker",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Docker."
+  },
+  "103": {
+    "id": 103,
+    "canonical_url": "https://docs.docker.com/get-started/workshop/",
+    "skill_name": "Docker",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Docker."
+  },
+  "https://kubernetes.io/docs/concepts/": {
+    "id": 104,
+    "canonical_url": "https://kubernetes.io/docs/concepts/",
+    "skill_name": "Kubernetes",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Kubernetes."
+  },
+  "104": {
+    "id": 104,
+    "canonical_url": "https://kubernetes.io/docs/concepts/",
+    "skill_name": "Kubernetes",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Kubernetes."
+  },
+  "https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes": {
+    "id": 105,
+    "canonical_url": "https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes",
+    "skill_name": "Kubernetes",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Kubernetes."
+  },
+  "105": {
+    "id": 105,
+    "canonical_url": "https://www.edx.org/learn/kubernetes/the-linux-foundation-introduction-to-kubernetes",
+    "skill_name": "Kubernetes",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Kubernetes."
+  },
+  "https://docs.github.com/en/actions/quickstart": {
+    "id": 106,
+    "canonical_url": "https://docs.github.com/en/actions/quickstart",
+    "skill_name": "CI/CD",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with CI/CD."
+  },
+  "106": {
+    "id": 106,
+    "canonical_url": "https://docs.github.com/en/actions/quickstart",
+    "skill_name": "CI/CD",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with CI/CD."
+  },
+  "107": {
+    "id": 107,
+    "canonical_url": "https://docs.gitlab.com/ee/ci/",
+    "skill_name": "CI/CD",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with CI/CD."
+  },
+  "https://developer.hashicorp.com/terraform/tutorials": {
+    "id": 108,
+    "canonical_url": "https://developer.hashicorp.com/terraform/tutorials",
+    "skill_name": "Terraform",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Terraform."
+  },
+  "108": {
+    "id": 108,
+    "canonical_url": "https://developer.hashicorp.com/terraform/tutorials",
+    "skill_name": "Terraform",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Terraform."
+  },
+  "https://docs.ansible.com/ansible/latest/getting_started/index.html": {
+    "id": 109,
+    "canonical_url": "https://docs.ansible.com/ansible/latest/getting_started/index.html",
+    "skill_name": "Ansible",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Ansible."
+  },
+  "109": {
+    "id": 109,
+    "canonical_url": "https://docs.ansible.com/ansible/latest/getting_started/index.html",
+    "skill_name": "Ansible",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Ansible."
+  },
+  "https://prometheus.io/docs/introduction/overview/": {
+    "id": 110,
+    "canonical_url": "https://prometheus.io/docs/introduction/overview/",
+    "skill_name": "Prometheus",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Prometheus."
+  },
+  "110": {
+    "id": 110,
+    "canonical_url": "https://prometheus.io/docs/introduction/overview/",
+    "skill_name": "Prometheus",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Prometheus."
+  },
+  "https://git-scm.com/book/en/v2": {
+    "id": 111,
+    "canonical_url": "https://git-scm.com/book/en/v2",
+    "skill_name": "Git",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Git."
+  },
+  "111": {
+    "id": 111,
+    "canonical_url": "https://git-scm.com/book/en/v2",
+    "skill_name": "Git",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Git."
+  },
+  "https://www.freecodecamp.org/news/git-and-github-for-beginners/": {
+    "id": 112,
+    "canonical_url": "https://www.freecodecamp.org/news/git-and-github-for-beginners/",
+    "skill_name": "Git",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Git."
+  },
+  "112": {
+    "id": 112,
+    "canonical_url": "https://www.freecodecamp.org/news/git-and-github-for-beginners/",
+    "skill_name": "Git",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Git."
+  },
+  "https://www.coursera.org/professional-certificates/google-cybersecurity": {
+    "id": 113,
+    "canonical_url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+    "skill_name": "Network Security",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Network Security."
+  },
+  "113": {
+    "id": 113,
+    "canonical_url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+    "skill_name": "Network Security",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Network Security."
+  },
+  "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity": {
+    "id": 114,
+    "canonical_url": "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity",
+    "skill_name": "Network Security",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Network Security."
+  },
+  "114": {
+    "id": 114,
+    "canonical_url": "https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity",
+    "skill_name": "Network Security",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Network Security."
+  },
+  "https://www.coursera.org/learn/crypto": {
+    "id": 115,
+    "canonical_url": "https://www.coursera.org/learn/crypto",
+    "skill_name": "Cryptography",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Cryptography."
+  },
+  "115": {
+    "id": 115,
+    "canonical_url": "https://www.coursera.org/learn/crypto",
+    "skill_name": "Cryptography",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Cryptography."
+  },
+  "116": {
+    "id": 116,
+    "canonical_url": "https://owasp.org/www-project-web-security-testing-guide/",
+    "skill_name": "Ethical Hacking",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Ethical Hacking."
+  },
+  "https://portswigger.net/web-security": {
+    "id": 117,
+    "canonical_url": "https://portswigger.net/web-security",
+    "skill_name": "Penetration Testing",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Penetration Testing."
+  },
+  "117": {
+    "id": 117,
+    "canonical_url": "https://portswigger.net/web-security",
+    "skill_name": "Penetration Testing",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Penetration Testing."
+  },
+  "https://www.wireshark.org/docs/wsug_html_chunked/": {
+    "id": 118,
+    "canonical_url": "https://www.wireshark.org/docs/wsug_html_chunked/",
+    "skill_name": "Wireshark",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Wireshark."
+  },
+  "118": {
+    "id": 118,
+    "canonical_url": "https://www.wireshark.org/docs/wsug_html_chunked/",
+    "skill_name": "Wireshark",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Wireshark."
+  },
+  "https://www.elastic.co/guide/en/security/current/es-overview.html": {
+    "id": 119,
+    "canonical_url": "https://www.elastic.co/guide/en/security/current/es-overview.html",
+    "skill_name": "SIEM",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with SIEM."
+  },
+  "119": {
+    "id": 119,
+    "canonical_url": "https://www.elastic.co/guide/en/security/current/es-overview.html",
+    "skill_name": "SIEM",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with SIEM."
+  },
+  "https://www.digitalocean.com/community/tutorials/a-deep-dive-into-iptables-and-netfilter-architecture": {
+    "id": 120,
+    "canonical_url": "https://www.digitalocean.com/community/tutorials/a-deep-dive-into-iptables-and-netfilter-architecture",
+    "skill_name": "Firewalls",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Firewalls."
+  },
+  "120": {
+    "id": 120,
+    "canonical_url": "https://www.digitalocean.com/community/tutorials/a-deep-dive-into-iptables-and-netfilter-architecture",
+    "skill_name": "Firewalls",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T12:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Firewalls."
+  },
+  "https://cloud.r-project.org/doc/manuals/r-release/R-intro.html": {
+    "id": 29,
+    "canonical_url": "https://cloud.r-project.org/doc/manuals/r-release/R-intro.html",
+    "skill_name": "R",
+    "cost_tier": "Open Source",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with R."
+  },
+  "https://www.freecodecamp.org/learn/front-end-development-libraries/": {
+    "id": 36,
+    "canonical_url": "https://www.freecodecamp.org/learn/front-end-development-libraries/",
+    "skill_name": "React",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with React."
+  },
+  "https://redux-toolkit.js.org/tutorials/quick-start": {
+    "id": 38,
+    "canonical_url": "https://redux-toolkit.js.org/tutorials/quick-start",
+    "skill_name": "Redux",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Redux."
+  },
+  "https://www.coursera.org/learn/intro-to-mobile-development": {
+    "id": 44,
+    "canonical_url": "https://www.coursera.org/learn/intro-to-mobile-development",
+    "skill_name": "Mobile Development",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Mobile Development."
+  },
+  "https://spring.io/guides/gs/rest-service/": {
+    "id": 52,
+    "canonical_url": "https://spring.io/guides/gs/rest-service/",
+    "skill_name": "Spring Boot",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Spring Boot."
+  },
+  "https://docs.pytest.org/en/stable/how-to/fixtures.html": {
+    "id": 63,
+    "canonical_url": "https://docs.pytest.org/en/stable/how-to/fixtures.html",
+    "skill_name": "PyTest",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PyTest."
+  },
+  "https://cs229.stanford.edu/": {
+    "id": 73,
+    "canonical_url": "https://cs229.stanford.edu/",
+    "skill_name": "Machine Learning",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Machine Learning."
+  },
+  "https://www.coursera.org/learn/python-plotting": {
+    "id": 91,
+    "canonical_url": "https://www.coursera.org/learn/python-plotting",
+    "skill_name": "Data Visualization",
+    "cost_tier": "Free Audit Available",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Data Visualization."
+  },
+  "https://aws.amazon.com/getting-started/": {
+    "id": 97,
+    "canonical_url": "https://aws.amazon.com/getting-started/",
+    "skill_name": "AWS",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with AWS."
+  },
+  "https://docs.docker.com/get-started/workshop/": {
+    "id": 103,
+    "canonical_url": "https://docs.docker.com/get-started/workshop/",
+    "skill_name": "Docker",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Docker."
+  },
+  "https://docs.gitlab.com/ee/ci/": {
+    "id": 107,
+    "canonical_url": "https://docs.gitlab.com/ee/ci/",
+    "skill_name": "CI/CD",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with CI/CD."
+  },
+  "https://owasp.org/www-project-web-security-testing-guide/": {
+    "id": 116,
+    "canonical_url": "https://owasp.org/www-project-web-security-testing-guide/",
+    "skill_name": "Ethical Hacking",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Ethical Hacking."
+  },
+  "https://flask.palletsprojects.com/en/stable/tutorial/": {
+    "id": 50,
+    "canonical_url": "https://flask.palletsprojects.com/en/stable/tutorial/",
+    "skill_name": "Flask",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Flask."
+  },
+  "https://inria.github.io/scikit-learn-mooc/": {
+    "id": 77,
+    "canonical_url": "https://inria.github.io/scikit-learn-mooc/",
+    "skill_name": "Scikit-learn",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with Scikit-learn."
+  },
+  "https://pytorch.org/tutorials/beginner/basics/intro.html": {
+    "id": 81,
+    "canonical_url": "https://pytorch.org/tutorials/beginner/basics/intro.html",
+    "skill_name": "PyTorch",
+    "cost_tier": "Free",
+    "verification_status": "verified",
+    "last_verified_at": "2026-11-02T13:00:00Z",
+    "content_relevance": "Verified direct curriculum alignment with PyTorch."
+  }
+}

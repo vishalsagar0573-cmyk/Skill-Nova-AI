@@ -1,7 +1,225 @@
 import abc
+import re
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from services.normalizer import get_canonical_skill, is_same_skill
+
+def extract_candidate_evidence(profile_or_skills):
+    """
+    Extracts structured multi-source evidence from candidate profile or skills list.
+    """
+    if isinstance(profile_or_skills, list):
+        profile = {"skills": profile_or_skills}
+    elif isinstance(profile_or_skills, dict):
+        profile = profile_or_skills
+    else:
+        profile = {}
+
+    skills_list = profile.get("skills", [])
+    if isinstance(skills_list, str):
+        skills_list = [s.strip() for s in skills_list.split(",") if s.strip()]
+
+    # 1. Direct skills normalized to canonical forms
+    direct_skills = set()
+    for s in skills_list:
+        if s:
+            canon = get_canonical_skill(s)
+            direct_skills.add(canon.lower())
+            direct_skills.add(str(s).strip().lower())
+
+    # 2. Project technologies & descriptions
+    project_skills = set()
+    raw_projects = profile.get("projects", [])
+    for p in raw_projects:
+        if isinstance(p, dict):
+            techs = p.get("technology", "") or p.get("technologies", "") or ""
+            for t in re.split(r'[,|;/]+', str(techs)):
+                if t.strip():
+                    project_skills.add(get_canonical_skill(t.strip()).lower())
+                    project_skills.add(t.strip().lower())
+            desc = f"{p.get('project_name', '')} {p.get('title', '')} {p.get('description', '')}".lower()
+        else:
+            desc = str(p).lower()
+            for t in re.split(r'[,|;/]+', desc):
+                if t.strip() and len(t.strip()) < 25:
+                    canon = get_canonical_skill(t.strip())
+                    if canon.lower() != t.strip().lower():
+                        project_skills.add(canon.lower())
+
+        tech_words = [
+            "scikit-learn", "sklearn", "tensorflow", "pytorch", "keras", "xgboost", 
+            "random forest", "django", "fastapi", "flask", "react", "vue", "angular", 
+            "docker", "kubernetes", "aws", "azure", "gcp", "postgresql", "postgres", 
+            "mysql", "mongodb", "redis", "pandas", "numpy", "power bi", "tableau",
+            "git", "linux", "flutter", "react native", "rest api"
+        ]
+        for tw in tech_words:
+            if re.search(r'\b' + re.escape(tw) + r'\b', desc):
+                project_skills.add(get_canonical_skill(tw).lower())
+
+    # 3. Internships / Experience
+    internship_skills = set()
+    raw_exp = profile.get("internships", []) + profile.get("experience", [])
+    for exp in raw_exp:
+        exp_text = ""
+        if isinstance(exp, dict):
+            exp_text = f"{exp.get('company', '')} {exp.get('role', '')} {exp.get('description', '')}".lower()
+        else:
+            exp_text = str(exp).lower()
+        for tw in ["sql", "postgresql", "python", "scikit-learn", "tensorflow", "pytorch", "django", "fastapi", "docker", "aws", "react"]:
+            if re.search(r'\b' + re.escape(tw) + r'\b', exp_text):
+                internship_skills.add(get_canonical_skill(tw).lower())
+
+    # 4. Certifications
+    certs = []
+    for c in profile.get("certifications", []):
+        if isinstance(c, dict):
+            certs.append(f"{c.get('certificate_name', '')} {c.get('name', '')} {c.get('platform', '')}".lower())
+        else:
+            certs.append(str(c).lower())
+
+    # 5. DSA Level
+    dsa_level = str(profile.get("dsa_level", "None")).strip().capitalize()
+
+    # 6. Domain Competency Scores (supporting evidence only!)
+    scores = profile.get("scores") or {}
+    if not isinstance(scores, dict):
+        scores = {}
+    if not scores and "overall_score" in profile:
+        scores = {k: profile.get(k, 0) for k in ["ai_ml", "database", "cloud", "programming", "frontend", "backend"]}
+
+    return {
+        "direct_skills": direct_skills,
+        "project_skills": project_skills,
+        "internship_skills": internship_skills,
+        "certifications": certs,
+        "projects": raw_projects,
+        "internships": raw_exp,
+        "dsa_level": dsa_level,
+        "scores": scores
+    }
+
+def evaluate_single_skill_match(skill: str, evidence: dict) -> bool:
+    """
+    Evaluates whether a target skill is demonstrated by candidate multi-source evidence.
+    Precision rules:
+    - Direct exact canonical match in skills, projects, or internships.
+    - Umbrella foundational skills (Machine Learning, SQL, Cloud Computing, DSA).
+    - Preserves distinction: SQL != PostgreSQL; React != React Native; Scikit-learn != TF/PyTorch.
+    - Competency scores used strictly as supporting evidence, never automatic proof alone.
+    """
+    target_canon = get_canonical_skill(skill)
+    target_lower = target_canon.lower()
+    
+    all_demonstrated = evidence["direct_skills"] | evidence["project_skills"] | evidence["internship_skills"]
+
+    # RULE 1: Direct Exact Canonical Match
+    if target_lower in all_demonstrated:
+        return True
+
+    raw_lower = str(skill).strip().lower()
+    if raw_lower in all_demonstrated:
+        return True
+
+    # RULE 2: Web React vs React Native (STRICT SEPARATION)
+    if target_lower == "react":
+        # Only direct React satisfies React. "react native" does NOT satisfy web React.
+        return "react" in all_demonstrated
+    if target_lower == "react native":
+        # Only direct React Native satisfies React Native. Web "react" does NOT satisfy React Native.
+        return "react native" in all_demonstrated
+
+    # RULE 3: Relational SQL vs Specific RDBMS (PostgreSQL, MySQL, etc.)
+    # PostgreSQL usage supports foundational SQL knowledge.
+    # BUT SQL knowledge does NOT satisfy PostgreSQL specific requirements!
+    if target_lower == "sql":
+        relational_engines = {"postgresql", "mysql", "sqlite", "oracle"}
+        if bool(relational_engines & all_demonstrated):
+            return True
+        if any("sql" in c for c in evidence["certifications"]):
+            return True
+        return False
+
+    if target_lower == "postgresql":
+        # Requires direct evidence of PostgreSQL. Generic SQL does NOT satisfy PostgreSQL!
+        return "postgresql" in all_demonstrated
+
+    # RULE 4: Machine Learning (Umbrella Foundational) vs Specific Deep Learning / MLOps Frameworks
+    if target_lower == "machine learning":
+        # Foundational ML is satisfied ONLY IF candidate demonstrated classical ML tools
+        # (Scikit-learn, Random Forest, XGBoost) AND (ML project OR ML certification OR ai_ml_score >= 60)
+        ml_tools = {"scikit-learn", "random forest", "xgboost"}
+        has_ml_tool = bool(ml_tools & all_demonstrated)
+        
+        has_ml_proj = False
+        for p in evidence["projects"]:
+            p_text = (p.get("description", "") + " " + p.get("technology", "")).lower() if isinstance(p, dict) else str(p).lower()
+            if any(term in p_text for term in ["machine learning", "classification", "regression", "churn", "predictive", "clustering", "random forest", "scikit-learn", "model"]):
+                has_ml_proj = True
+                break
+                
+        has_ml_cert = any("machine learning" in c or "deep learning" in c or "data science" in c for c in evidence["certifications"])
+        ai_ml_score = evidence["scores"].get("ai_ml", 0) or 0
+        
+        # Competency score >= 60 is NOT automatic proof alone; must be combined with ML tool
+        if has_ml_tool and (has_ml_proj or has_ml_cert or ai_ml_score >= 60):
+            return True
+        if has_ml_proj and has_ml_cert:
+            return True
+        return False
+
+    # Deep learning and specialized tools STRICTLY require direct evidence:
+    # Scikit-learn does NOT satisfy TensorFlow, PyTorch, Keras, or MLOps!
+    if target_lower in {"tensorflow", "pytorch", "keras", "mlops"}:
+        return target_lower in all_demonstrated
+
+    # RULE 5: Data Structures & Algorithms
+    if target_lower in {"data structures", "algorithms"}:
+        if evidence["dsa_level"] in {"Intermediate", "Advanced"}:
+            return True
+        if bool({"data structures", "algorithms"} & all_demonstrated):
+            return True
+        return False
+
+    # RULE 6: Cloud Computing (Umbrella Foundational) vs Specific Cloud Providers (AWS, Azure, GCP)
+    if target_lower in {"cloud computing", "cloud"}:
+        cloud_providers = {"aws", "azure", "gcp", "docker", "kubernetes"}
+        has_cloud_tool = bool(cloud_providers & all_demonstrated)
+        has_cloud_cert = any("cloud" in c or "aws" in c or "azure" in c for c in evidence["certifications"])
+        cloud_score = evidence["scores"].get("cloud", 0) or 0
+        
+        if has_cloud_tool and (has_cloud_cert or cloud_score >= 60 or len(evidence["projects"]) > 0):
+            return True
+        return False
+
+    if target_lower in {"aws", "azure", "gcp"}:
+        return target_lower in all_demonstrated
+
+    # RULE 7: Python vs Backend Frameworks
+    # Python does NOT satisfy Django or FastAPI
+    if target_lower in {"django", "fastapi", "flask"}:
+        return target_lower in all_demonstrated
+
+    if target_lower == "python":
+        if "python" in all_demonstrated:
+            return True
+        python_indicators = {"django", "fastapi", "flask", "pandas", "numpy", "scikit-learn"}
+        if bool(python_indicators & all_demonstrated):
+            return True
+        return False
+
+    # RULE 8: Java vs Spring Boot
+    if target_lower in {"spring boot", "hibernate"}:
+        return target_lower in all_demonstrated
+    if target_lower == "java":
+        if "java" in all_demonstrated:
+            return True
+        if bool({"spring boot", "hibernate", "maven"} & all_demonstrated):
+            return True
+        return False
+
+    return target_lower in all_demonstrated
 
 class BaseJobMatcher(abc.ABC):
     @abc.abstractmethod
@@ -36,7 +254,7 @@ class RuleBasedJobMatcher(BaseJobMatcher):
         }
 
     def _normalize_skill(self, skill):
-        return str(skill).lower().strip()
+        return get_canonical_skill(str(skill)).lower().strip()
 
     def calculate_similarity(self, user_text, job_text):
         if not user_text.strip() or not job_text.strip():
@@ -49,19 +267,27 @@ class RuleBasedJobMatcher(BaseJobMatcher):
         except Exception:
             return 0.0
 
-    def match_skills(self, user_skills, job_skills):
-        normalized_user = {self._normalize_skill(s) for s in user_skills}
+    def match_skills(self, user_skills_or_profile, job_skills):
+        """
+        Returns list of matched job skills based on candidate multi-source evidence.
+        Accepts either a profile dict or a flat skills list for backward compatibility.
+        """
+        evidence = extract_candidate_evidence(user_skills_or_profile)
         matched = []
         for js in job_skills:
-            if self._normalize_skill(js) in normalized_user:
+            if evaluate_single_skill_match(js, evidence):
                 matched.append(js)
         return matched
 
-    def find_missing_skills(self, user_skills, job_skills, importance="high"):
-        normalized_user = {self._normalize_skill(s) for s in user_skills}
+    def find_missing_skills(self, user_skills_or_profile, job_skills, importance="high"):
+        """
+        Returns list of missing job skills with assigned importance level.
+        Accepts either a profile dict or a flat skills list for backward compatibility.
+        """
+        evidence = extract_candidate_evidence(user_skills_or_profile)
         missing = []
         for js in job_skills:
-            if self._normalize_skill(js) not in normalized_user:
+            if not evaluate_single_skill_match(js, evidence):
                 missing.append({"skill": js, "importance": importance})
         return missing
 
@@ -90,11 +316,9 @@ class RuleBasedJobMatcher(BaseJobMatcher):
         reasons = []
         score = 0.0
         
-        user_skills = profile.get("skills", [])
-        
         # 1. Technical Skills (Required) - 50%
         req_skills = role.required_skills or []
-        matched_req = self.match_skills(user_skills, req_skills)
+        matched_req = self.match_skills(profile, req_skills)
         if req_skills:
             skill_ratio = len(matched_req) / len(req_skills)
             score += skill_ratio * self.weights["technical_skills"] * 100
@@ -109,7 +333,7 @@ class RuleBasedJobMatcher(BaseJobMatcher):
             
         # 2. Preferred Skills - 5%
         pref_skills = role.preferred_skills or []
-        matched_pref = self.match_skills(user_skills, pref_skills)
+        matched_pref = self.match_skills(profile, pref_skills)
         if pref_skills:
             pref_ratio = len(matched_pref) / len(pref_skills)
             score += pref_ratio * self.weights["preferred_skills"] * 100
@@ -155,8 +379,8 @@ class RuleBasedJobMatcher(BaseJobMatcher):
         else:
             reasons.append(f"CGPA is below preferred minimum ({role.minimum_cgpa})")
             
-        missing_req = self.find_missing_skills(user_skills, req_skills, "high")
-        missing_pref = self.find_missing_skills(user_skills, pref_skills, "medium")
+        missing_req = self.find_missing_skills(profile, req_skills, "high")
+        missing_pref = self.find_missing_skills(profile, pref_skills, "medium")
         all_missing = missing_req + missing_pref
         all_matched = matched_req + matched_pref
         

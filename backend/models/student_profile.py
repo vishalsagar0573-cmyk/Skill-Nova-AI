@@ -64,7 +64,9 @@ class StudentInternship(Base):
     
     company = Column(String)
     role = Column(String)
-    duration = Column(String)
+    start_date = Column(String, nullable=True)
+    end_date = Column(String, nullable=True)
+    duration = Column(String, nullable=True)
     description = Column(Text)
 
     student = relationship("StudentProfile", back_populates="internships")

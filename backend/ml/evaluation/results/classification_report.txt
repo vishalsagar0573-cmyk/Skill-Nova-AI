@@ -1,20 +1,20 @@
                            precision    recall  f1-score   support
 
-              AI Engineer       1.00      1.00      1.00       150
-        Backend Developer       1.00      1.00      1.00       145
-           Cloud Engineer       1.00      0.99      0.99       142
-  Cyber Security Engineer       0.98      1.00      0.99       130
-             Data Analyst       1.00      1.00      1.00       150
-           Data Scientist       1.00      1.00      1.00       139
-          DevOps Engineer       0.99      0.99      0.99       161
-       Frontend Developer       0.78      0.82      0.80       130
-     Full Stack Developer       1.00      1.00      1.00       140
-           Java Developer       0.99      0.97      0.98       134
-Machine Learning Engineer       1.00      1.00      1.00       147
-     Mobile App Developer       0.83      0.78      0.81       143
-         Python Developer       0.97      0.99      0.98       125
-        Software Engineer       1.00      1.00      1.00       164
+              AI Engineer       1.00      1.00      1.00       143
+        Backend Developer       0.83      0.82      0.83       142
+           Cloud Engineer       0.91      0.92      0.92       143
+  Cyber Security Engineer       0.89      0.97      0.93       143
+             Data Analyst       1.00      1.00      1.00       143
+           Data Scientist       0.99      1.00      1.00       143
+          DevOps Engineer       0.95      0.85      0.90       143
+       Frontend Developer       0.94      0.95      0.94       143
+     Full Stack Developer       0.99      1.00      1.00       143
+           Java Developer       0.71      0.73      0.72       143
+Machine Learning Engineer       1.00      0.99      1.00       143
+     Mobile App Developer       0.95      0.93      0.94       142
+         Python Developer       0.74      0.74      0.74       143
+        Software Engineer       0.98      0.95      0.96       143
 
-                 accuracy                           0.97      2000
-                macro avg       0.97      0.97      0.97      2000
-             weighted avg       0.97      0.97      0.97      2000
+                 accuracy                           0.92      2000
+                macro avg       0.92      0.92      0.92      2000
+             weighted avg       0.92      0.92      0.92      2000

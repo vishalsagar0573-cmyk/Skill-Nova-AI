@@ -1,6 +1,8 @@
 import abc
 from sqlalchemy.orm import Session
 from models.skill_gap import LearningResource
+from services.normalizer import get_canonical_skill
+from services.hybrid_search import HybridResourceSearchEngine
 
 class BaseSkillGapEngine(abc.ABC):
     @abc.abstractmethod
@@ -8,13 +10,14 @@ class BaseSkillGapEngine(abc.ABC):
         pass
 
 class RuleBasedSkillGapEngine(BaseSkillGapEngine):
-    def __init__(self):
+    def __init__(self, search_engine: HybridResourceSearchEngine = None):
         self.weights = {
             "competency": 0.25,
             "job_compatibility": 0.25,
             "skill_gap_inverse": 0.30,
             "profile_completion": 0.20
         }
+        self.search_engine = search_engine or HybridResourceSearchEngine()
 
     def _calculate_profile_completion(self, competency_data: dict) -> float:
         fields = ["skills", "projects", "internships", "certifications", "cgpa", "career_interests"]
@@ -45,22 +48,8 @@ class RuleBasedSkillGapEngine(BaseSkillGapEngine):
         return min(total_gap_points, 100.0)
 
     def _find_learning_resources(self, db: Session, skill: str) -> list:
-        # Simple ilike search for now
-        resources = db.query(LearningResource).filter(
-            LearningResource.skill_name.ilike(f"%{skill}%")
-        ).all()
-        
-        return [
-            {
-                "id": r.id,
-                "type": r.resource_type,
-                "title": r.title,
-                "provider": r.provider,
-                "url": r.url,
-                "difficulty": r.difficulty,
-                "duration": r.estimated_duration
-            } for r in resources
-        ]
+        """Finds verified learning resources using the hybrid search engine."""
+        return self.search_engine.search_by_skill(db, skill)
 
     def _generate_action_plan(self, prioritized_skills: list, db: Session) -> list:
         action_plan = []
@@ -72,6 +61,8 @@ class RuleBasedSkillGapEngine(BaseSkillGapEngine):
         
         for idx, skill_data in enumerate(sorted_skills):
             skill = skill_data["skill"]
+            canonical = get_canonical_skill(skill)
+            canonical_slug = canonical.strip().lower()
             resources = self._find_learning_resources(db, skill)
             
             if not resources:
@@ -86,7 +77,10 @@ class RuleBasedSkillGapEngine(BaseSkillGapEngine):
                 "task": f"Complete {core['title']} for {skill}",
                 "priority": skill_data["importance"],
                 "estimated_hours": core["duration"],
-                "resource_url": core["url"]
+                "resource_url": core["url"],
+                "task_type": "skill_step",
+                "skill_identifier": canonical_slug,
+                "canonical_skill": canonical
             }
             action_plan.append(task1)
             
@@ -101,7 +95,10 @@ class RuleBasedSkillGapEngine(BaseSkillGapEngine):
                     "task": f"Review {docs['title']}",
                     "priority": "medium",
                     "estimated_hours": docs["duration"],
-                    "resource_url": docs["url"]
+                    "resource_url": docs["url"],
+                    "task_type": "skill_step",
+                    "skill_identifier": canonical_slug,
+                    "canonical_skill": canonical
                 }
                 action_plan.append(task2)
                 current_week_hours += docs["duration"]
@@ -116,7 +113,10 @@ class RuleBasedSkillGapEngine(BaseSkillGapEngine):
                 "task": "Build a capstone project utilizing learned skills",
                 "priority": "high",
                 "estimated_hours": 10.0,
-                "resource_url": "https://github.com/new"
+                "resource_url": "https://github.com/new",
+                "task_type": "capstone",
+                "skill_identifier": "capstone_milestone",
+                "canonical_skill": "Capstone Project"
             })
 
         return action_plan

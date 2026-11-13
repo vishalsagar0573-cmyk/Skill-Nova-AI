@@ -3,8 +3,9 @@ import numpy as np
 import os
 import json
 import joblib
-from sklearn.model_selection import train_test_split, cross_validate, RandomizedSearchCV
+from sklearn.model_selection import train_test_split, cross_validate, RandomizedSearchCV, StratifiedKFold
 from sklearn.preprocessing import StandardScaler, LabelEncoder, OrdinalEncoder
+from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
 from xgboost import XGBClassifier
 from sklearn.svm import SVC
@@ -41,13 +42,11 @@ def main():
     X = df[all_feature_names]
     X = X.fillna(0)
     
-    scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
-    
-    # 5-Fold Cross Validation
+    # 5-Fold Stratified Cross Validation with Pipeline (Zero Data Leakage: Scaler fitted ONLY on train folds)
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
     models = {
         "Random Forest": RandomForestClassifier(n_estimators=100, random_state=42),
-        "XGBoost": XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=42),
+        "XGBoost": XGBClassifier(eval_metric='mlogloss', random_state=42),
         "SVM": SVC(kernel='rbf', probability=True, random_state=42),
         "ANN": MLPClassifier(hidden_layer_sizes=(100, 50), max_iter=500, random_state=42)
     }
@@ -59,12 +58,13 @@ def main():
         'f1': 'f1_macro'
     }
     
-    print("Running 5-Fold Cross Validation...")
+    print("Running 5-Fold Stratified Cross Validation with Fold-Isolated Preprocessing...")
     results = []
     
     for name, model in models.items():
         print(f"Evaluating {name}...")
-        cv_results = cross_validate(model, X_scaled, y, cv=5, scoring=scoring, n_jobs=-1)
+        pipe = Pipeline([('scaler', StandardScaler()), ('clf', model)])
+        cv_results = cross_validate(pipe, X, y, cv=cv, scoring=scoring, n_jobs=-1)
         
         mean_acc = cv_results['test_accuracy'].mean()
         std_acc = cv_results['test_accuracy'].std()
@@ -81,29 +81,34 @@ def main():
             "F1 Score": round(mean_f1 * 100, 2)
         })
         
-    results_df = pd.DataFrame(results)
-    results_df.to_csv(os.path.join(eval_dir, 'model_comparison.csv'), index=False)
+    import csv
+    with open(os.path.join(eval_dir, 'model_comparison.csv'), mode='w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=["Model", "Mean Accuracy", "Std Dev", "Precision", "Recall", "F1 Score"])
+        writer.writeheader()
+        writer.writerows(results)
     
-    print("\nStarting Hyperparameter Tuning for XGBoost...")
-    # RandomizedSearchCV for XGBoost
+    print("\nStarting Hyperparameter Tuning for XGBoost (Pipeline-Isolated)...")
+    xgb_pipe = Pipeline([
+        ('scaler', StandardScaler()),
+        ('xgb', XGBClassifier(eval_metric='mlogloss', random_state=42))
+    ])
     xgb_param_grid = {
-        'max_depth': [3, 5, 7],
-        'learning_rate': [0.01, 0.1, 0.2],
-        'n_estimators': [100, 200, 300],
-        'subsample': [0.8, 1.0]
+        'xgb__max_depth': [3, 5, 7],
+        'xgb__learning_rate': [0.01, 0.1, 0.2],
+        'xgb__n_estimators': [100, 200, 300],
+        'xgb__subsample': [0.8, 1.0]
     }
-    xgb_base = XGBClassifier(use_label_encoder=False, eval_metric='mlogloss', random_state=42)
-    random_search = RandomizedSearchCV(xgb_base, param_distributions=xgb_param_grid, n_iter=10, scoring='accuracy', cv=5, random_state=42, n_jobs=-1)
+    random_search = RandomizedSearchCV(xgb_pipe, param_distributions=xgb_param_grid, n_iter=10, scoring='accuracy', cv=cv, random_state=42, n_jobs=-1)
     
-    random_search.fit(X_scaled, y)
-    best_tuned_xgb = random_search.best_estimator_
+    random_search.fit(X, y)
+    best_pipe = random_search.best_estimator_
     tuned_accuracy = random_search.best_score_
     print(f"Tuned XGBoost CV Accuracy: {tuned_accuracy*100:.2f}%")
     
-    # Train-test split for plotting (Confusion Matrix & Feature Importance)
-    X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
-    best_tuned_xgb.fit(X_train, y_train)
-    preds = best_tuned_xgb.predict(X_test)
+    # Stratified Train-test split for plotting (Confusion Matrix & Feature Importance)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+    best_pipe.fit(X_train, y_train)
+    preds = best_pipe.predict(X_test)
     
     # Generate Classification Report
     report = classification_report(y_test, preds, target_names=label_encoder.classes_)
@@ -123,51 +128,43 @@ def main():
     plt.close()
     
     # Feature Importance
-    importances = best_tuned_xgb.feature_importances_
+    best_xgb_model = best_pipe.named_steps['xgb']
+    importances = best_xgb_model.feature_importances_
     plt.figure(figsize=(10, 6))
-    sns.barplot(x=importances, y=all_feature_names, palette='viridis')
+    sns.barplot(x=importances, y=all_feature_names, hue=all_feature_names, palette='viridis', legend=False)
     plt.title('Feature Importance - Tuned XGBoost')
     plt.tight_layout()
     plt.savefig(os.path.join(eval_dir, 'feature_importance.png'))
     plt.close()
     
-    # Model Selection Logic
-    existing_meta_path = os.path.join(models_dir, 'feature_metadata.json')
-    existing_acc = 0.0
-    if os.path.exists(existing_meta_path):
-        with open(existing_meta_path, 'r') as f:
-            meta = json.load(f)
-            existing_acc = meta.get('accuracy', 0.0)
-            
-    is_better = tuned_accuracy > existing_acc
+    print("\nSaving newly trained model artifacts...")
+    # Refit pipeline on FULL dataset before deploying
+    best_pipe.fit(X, y)
+    final_deployed_model = best_pipe.named_steps['xgb']
+    final_deployed_scaler = best_pipe.named_steps['scaler']
     
-    if is_better:
-        print("\nTuned XGBoost outperformed the existing model! Saving new artifacts...")
-        # Refit on FULL data before deploying
-        best_tuned_xgb.fit(X_scaled, y)
-        
-        joblib.dump(best_tuned_xgb, os.path.join(models_dir, 'best_model.joblib'))
-        joblib.dump(scaler, os.path.join(models_dir, 'scaler.joblib'))
-        joblib.dump(ordinal_encoder, os.path.join(models_dir, 'encoder.joblib'))
-        joblib.dump(label_encoder, os.path.join(models_dir, 'label_encoder.joblib'))
-        
-        metadata = {
-            "features": all_feature_names,
-            "label_mapping": {int(idx): label for idx, label in enumerate(label_encoder.classes_)},
-            "dataset_version": "1.0",
-            "model_version": "1.1",
-            "best_model_type": "Tuned XGBoost",
-            "accuracy": float(tuned_accuracy),
-            "preprocessing": {
-                "categorical_encoding": "OrdinalEncoder",
-                "numerical_scaling": "StandardScaler"
-            },
-            "best_params": random_search.best_params_
-        }
-        with open(existing_meta_path, 'w') as f:
-            json.dump(metadata, f, indent=4)
-    else:
-        print(f"\nTuned XGBoost ({tuned_accuracy*100:.2f}%) did not outperform the existing model ({existing_acc*100:.2f}%). Keeping existing model.")
+    joblib.dump(final_deployed_model, os.path.join(models_dir, 'best_model.joblib'))
+    joblib.dump(final_deployed_scaler, os.path.join(models_dir, 'scaler.joblib'))
+    joblib.dump(ordinal_encoder, os.path.join(models_dir, 'encoder.joblib'))
+    joblib.dump(label_encoder, os.path.join(models_dir, 'label_encoder.joblib'))
+    
+    metadata = {
+        "features": all_feature_names,
+        "label_mapping": {int(idx): label for idx, label in enumerate(label_encoder.classes_)},
+        "dataset_version": "2.0",
+        "model_version": "2.0",
+        "best_model_type": "Tuned XGBoost",
+        "accuracy": float(tuned_accuracy),
+        "preprocessing": {
+            "categorical_encoding": "OrdinalEncoder",
+            "numerical_scaling": "StandardScaler"
+        },
+        "best_params": random_search.best_params_
+    }
+    meta_path = os.path.join(models_dir, 'feature_metadata.json')
+    with open(meta_path, 'w') as f:
+        json.dump(metadata, f, indent=4)
+    print(f"Artifacts successfully saved to {meta_path} with CV Accuracy: {tuned_accuracy*100:.2f}%")
 
     # Print Final Summary
     print("\nModel Comparison")

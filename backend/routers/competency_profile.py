@@ -11,7 +11,9 @@ from pydantic import BaseModel
 from typing import Optional, Dict
 from dependencies.auth import get_current_user
 from models.user import User
+from sqlalchemy.orm.attributes import flag_modified
 import json
+import copy
 
 router = APIRouter()
 
@@ -53,21 +55,43 @@ def generate_competency_profile(db: Session = Depends(get_db), current_user: Use
     if latest_resume and latest_resume.parsed_data:
         parsed_resume_data = latest_resume.parsed_data
             
-    # 3. Merge Data Sources
-    
-    # Merge Skills
+    # Fetch existing competency record to preserve master evidence and verified skills
+    competency_record = db.query(cp_models.CompetencyProfile).filter(cp_models.CompetencyProfile.user_id == user_id).first()
+    existing_evidence = {}
+    existing_verified = []
+    if competency_record and competency_record.competency_json:
+        existing_evidence = copy.deepcopy(competency_record.competency_json.get("submitted_evidence", {}))
+        existing_verified = copy.deepcopy(competency_record.competency_json.get("verified_skills", []))
+
+    # Merge Skills (including preserved platform verified skills)
     raw_skills = []
     if student.technical_skills:
         raw_skills.extend([s.strip() for s in student.technical_skills.split(',')])
     
     if "technical_skills" in parsed_resume_data:
         raw_skills.extend(parsed_resume_data["technical_skills"])
+
+    for v in existing_verified:
+        c_skill = v.get("canonical_skill")
+        if c_skill:
+            raw_skills.append(c_skill)
         
     merged_skills = normalize_skills(raw_skills)
+    student.technical_skills = ", ".join(merged_skills)
     
     # Format student nested items
     sp_projects = [{"project_name": p.project_name, "technology": p.technology, "description": p.description} for p in student.projects]
-    sp_internships = [{"company": i.company, "role": i.role, "description": i.description} for i in student.internships]
+    sp_internships = [
+        {
+            "company": i.company,
+            "role": i.role,
+            "description": i.description,
+            "start_date": i.start_date,
+            "end_date": i.end_date,
+            "duration": i.duration
+        }
+        for i in student.internships
+    ]
     sp_certifications = [{"certificate_name": c.certificate_name, "platform": c.platform} for c in student.certifications]
     
     # Deduplication Logic
@@ -85,12 +109,21 @@ def generate_competency_profile(db: Session = Depends(get_db), current_user: Use
             merged_certifications.append(c_str)
             
     merged_internships = sp_internships.copy()
-    existing_companies = {i['company'].lower() for i in sp_internships}
+    existing_companies = {i['company'].lower() for i in sp_internships if i.get('company')}
+    
+    # Merge structured experience from parsed resume
+    for s_exp in parsed_resume_data.get("structured_experience", []):
+        s_comp = (s_exp.get("company") or "").strip().lower()
+        if s_comp and not any(ec in s_comp or s_comp in ec for ec in existing_companies):
+            merged_internships.append(s_exp)
+            existing_companies.add(s_comp)
+
+    # Fallback merge for raw experience chunks
     for i_str in parsed_resume_data.get("experience", []):
         if not any(ec in i_str.lower() for ec in existing_companies):
             merged_internships.append(i_str)
     
-    # Construct final unified JSON (Prioritizing Student Profile)
+    # Construct final unified JSON (Preserving Master Evidence & Verified Skills Provenance)
     unified_json = {
         "student_details": {
             "full_name": student.full_name,
@@ -111,17 +144,34 @@ def generate_competency_profile(db: Session = Depends(get_db), current_user: Use
         "internships": merged_internships,
         "certifications": merged_certifications,
         "education": parsed_resume_data.get("education", []),
-        "experience": parsed_resume_data.get("experience", [])
+        "experience": parsed_resume_data.get("experience", []),
+        "structured_experience": parsed_resume_data.get("structured_experience", []),
+        "submitted_evidence": existing_evidence,
+        "verified_skills": existing_verified
     }
     
     # 4. Save to Database
-    competency_record = db.query(cp_models.CompetencyProfile).filter(cp_models.CompetencyProfile.user_id == user_id).first()
-    
     if not competency_record:
         competency_record = cp_models.CompetencyProfile(user_id=user_id)
         db.add(competency_record)
         
     competency_record.competency_json = unified_json
+    flag_modified(competency_record, "competency_json")
+
+    # Recalculate domain scores via ScoringEngine
+    scoring_engine = ScoringEngine()
+    scores_dict, explanations_dict = scoring_engine.calculate_all(unified_json)
+    competency_record.overall_score = scores_dict.get("overall_score")
+    competency_record.overall_competency_score = scores_dict.get("overall_score")
+    competency_record.frontend_score = scores_dict.get("frontend_score")
+    competency_record.backend_score = scores_dict.get("backend_score")
+    competency_record.database_score = scores_dict.get("database_score")
+    competency_record.ai_ml_score = scores_dict.get("ai_ml_score")
+    competency_record.data_science_score = scores_dict.get("data_science_score")
+    competency_record.cloud_score = scores_dict.get("cloud_score")
+    competency_record.programming_score = scores_dict.get("programming_score")
+    competency_record.soft_skill_score = scores_dict.get("soft_skill_score")
+    competency_record.score_explanations = explanations_dict
     
     # Update status flags
     competency_record.resume_uploaded = True if latest_resume else False
@@ -172,6 +222,8 @@ def get_my_competency_scores(db: Session = Depends(get_db), current_user: User =
         profile.backend_score = scores.get("backend_score")
         profile.database_score = scores.get("database_score")
         profile.ai_ml_score = scores.get("ai_ml_score")
+        profile.data_science_score = scores.get("data_science_score")
+        profile.cloud_score = scores.get("cloud_score")
         profile.programming_score = scores.get("programming_score")
         profile.soft_skill_score = scores.get("soft_skill_score")
         
